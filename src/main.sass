@@ -1,27 +1,30 @@
 // --------------------------------------------------------
-// units
+// normalize
 // --------------------------------------------------------
-@import './sass/units/units'
+
+@import './sass/base/normalize'
 
 // --------------------------------------------------------
-// vendors
+// base
 // --------------------------------------------------------
-@import './sass/vendors/*.sass'
+
+@import './sass/base/units'
+@import './sass/base/grid'
+@import './sass/base/breakpoints'
+@import './sass/base/fonts'
+@import './sass/base/colors'
+@import './sass/base/typography'
 
 // --------------------------------------------------------
 // utilities
 // --------------------------------------------------------
-@import './sass/utilities/*'
-@import './sass/utilities/**/*'
 
-// --------------------------------------------------------
-// pages
-// --------------------------------------------------------
-@import './pages/**/*.sass'
+@import './sass/utilities/*.sass'
+@import './sass/utilities/**/*.sass'
 
 // --------------------------------------------------------
 // components
 // --------------------------------------------------------
-@import './base/*.sass'
-// @import './components/**/*.sass'
+
+@import './components/**/*.sass'
 @import './components/**/**/*.sass'
