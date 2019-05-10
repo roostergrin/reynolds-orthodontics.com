@@ -2,7 +2,6 @@
 
 <script>
 import FormContact from 'components/form/form-contact/form-contact'
-import TestCols from 'components/test-cols/test-cols'
 
 export default {
   name: 'Home',
@@ -12,8 +11,7 @@ export default {
     }
   },
   components: {
-    FormContact,
-    TestCols
+    FormContact
   }
 }
 </script>
