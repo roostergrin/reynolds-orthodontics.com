@@ -2,6 +2,10 @@
 
 > A Vue.js boilerplate for web development
 
+## Testing included with Jest framework
+
+> For info please read through docs: https://vue-test-utils.vuejs.org/guides 
+
 ## Commit Message Conventions
 ```bash
   # creates new component
