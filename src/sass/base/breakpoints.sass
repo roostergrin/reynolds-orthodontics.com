@@ -1,35 +1,43 @@
-@mixin desktop-lg
-  @media screen and (min-width: #{$screen-xl})
-    @content
-
 @mixin desktop
-  @media screen and (max-width: #{$screen-lg})
+  @media screen and (min-width: $screen-desktop)
     @content
 
-@mixin ipad-pro
-  @media screen and (min-height: 1366px) and (max-width: #{$screen-md})
+@mixin laptop-lg
+  @media screen and (max-width: $screen-laptop-lg)
+    @content
+
+@mixin laptop
+  @media screen and (max-width: $screen-laptop)
     @content
 
 @mixin tablet-lg
-  @media screen and (max-width: #{$screen-md})
+  @media screen and (max-width: $screen-tablet-lg) and (max-height: 1366px)
+    @content
+
+@mixin tablet-land-lg
+  @media screen and (max-width: 1366px) and (max-height: $screen-tablet-lg)
     @content
 
 @mixin tablet
-  @media screen and (max-width: #{$screen-sm})
+  @media screen and (max-width: $screen-tablet)
+    @content
+
+@mixin tablet-land
+  @media screen and (max-width: $screen-tablet-lg) and (max-height: $screen-tablet)
+    @content
+
+@mixin phone-lg
+  @media screen and (max-width: $screen-phone-lg)
+    @content
+
+@mixin phone-land-lg
+  @media screen and (max-width: 900px) and (max-height: $screen-phone-lg)
     @content
 
 @mixin phone
-  @media screen and (max-width: #{$screen-xs})
+  @media screen and (max-width: $screen-phone)
     @content
 
-@mixin phone-landscape
-  @media screen and (max-height: #{$screen-xs}) and (max-width: #{$screen-md})
-    @content
-
-@mixin phone-sm
-  @media screen and (max-width: $screen-xxs)
-    @content
-
-@mixin phone-sm-landscape
-  @media screen and (max-height: $screen-xxs) and (max-width: #{$screen-sm})
+@mixin phone-land
+  @media screen and (max-width: 750px) and (max-height: $screen-phone)
     @content

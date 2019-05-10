@@ -1,56 +1,36 @@
 // --------------------------------------------------------
-// TODO LIST
-//  1. TODO - make comments more newbie friendly
-//  2. TODO - create example in styleguide page
-//  3. TODO - clear up any todos on grid.sass
-//  4. TODO - break up classes to separate file so grid is only variables
-// --------------------------------------------------------
-
-
-// --------------------------------------------------------
-// initial values
-// --------------------------------------------------------
-
-$width-large: 1330px
-// $max-width: 1440px
-
-// --------------------------------------------------------
 // container
 // --------------------------------------------------------
 
 $width: 1180px
-$gutter: 21px
-// $outside-gutter: 64px
+$gutter: 24px
+$outside-gutter: 64px
 $columns: 12
+$width-large: ($width / $columns) * ($columns + 2)
+
+$max-width: 1440px
+$max-width-large: ($max-width / $columns) * ($columns + 2)
+
 
 // --------------------------------------------------------
 // screen sizes
 // --------------------------------------------------------
 
-$screen-xl: 2560px
-$screen-lg: 1440px
-$screen-md: 1024px
-$screen-sm: 768px
-$screen-xs: 480px
-$screen-xxs: 360px
-
-// --------------------------------------------------------
-// max-sizes for media queries
-// NOTE: unused
-// --------------------------------------------------------
-
-$screen-lg-max: $screen-xl - 1
-$screen-md-max: $screen-lg - 1
-$screen-sm-max: $screen-md - 1
-$screen-xs-max: $screen-sm - 1
+$screen-desktop: 1750px
+$screen-laptop-lg: 1440px
+$screen-laptop: 1100px
+$screen-tablet-lg: 1024px
+$screen-tablet: 768px
+$screen-phone-lg: 480px
+$screen-phone: 370px
 
 // --------------------------------------------------------
 // breakpoints
 // NOTE: media breakpoints for the containers ideally set it to two rems higher than your widths these are used to add padding to your containers so they are never touching the edges of the screen
 // --------------------------------------------------------
 
-$max-width: calc(#{$width} + #{$gutter})
-$max-width-large: calc(#{$width-large} + #{$gutter})
+$max-width: $width + $gutter
+$max-width-large: $width-large + $gutter
 
 
 // --------------------------------------------------------
