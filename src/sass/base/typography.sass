@@ -1,34 +1,35 @@
-.hero-text
+*
+  box-sizing: border-box
+
+body
+  @include desktop
+    font-size: 18px
+  @include phone
+    font-size: 14px
+  text-rendering: optimizeLegibility
+  line-height: 1.467
   font-family: $font
-  font-size: 48px
-  font-weight: 700
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 h1
   line-height: 1.25
-  font-family: $font
   font-size: 36px
 
 h2
   line-height: 1.25
   letter-spacing: 2.8px
-  font-family: $font
   font-size: 22px
 
 h3
   line-height: 1.12
-  font-family: $font
   font-size: 22px
   font-weight: 700
 
 h4
   line-height: 1.12
-  font-family: $font
   font-size: 18px
-
-body
-  line-height: 1.12
-  font-family: $font
-  font-size: 16px
 
 a
   text-decoration: none
@@ -36,14 +37,14 @@ a
 
 p
   margin: 0
-  line-height: 1.12
-  font-family: $font
-  font-size: 16px
+
+.hero-text
+  line-height: 1.25
+  font-size: 52px
+  font-weight: bold
 
 .p2
-  font-family: $font
   font-size: 15px
 
 .p3
-  font-family: $font
   font-size: 12px

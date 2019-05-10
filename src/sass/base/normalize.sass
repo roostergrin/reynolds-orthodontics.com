@@ -1,9 +1,8 @@
-// normalize.sass v8.0.0 | MIT License | github.com/necolas/normalize.css with small tweaks for personal use
+// normalize.sass v8.0.1 | MIT License | github.com/necolas/normalize.css - modified for sass
 
+// sass-lint:disable-all
 // 1. Correct the line height in all browsers.
 // 2. Prevent adjustments of font size after orientation changes in iOS.
-
-$black: rgb(15, 15, 15)
 
 html
   line-height: 1.15
@@ -14,17 +13,16 @@ html
 
 body
   margin: 0
-  font-size: 16px
+
+// Render the 'main' element consistently in IE
+
+main
+  display: block
 
 // Correct the font size and margin on `h1` elements within `section` and
 // `article` contexts in Chrome, Firefox, and Safari.
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
+h1
   margin: 0
   font-weight: normal
   font-style: normal
@@ -36,12 +34,9 @@ h6
 // 2. Show the overflow in Edge and IE.
 
 hr
-  margin: 0
-  border: none
-  background-color: $black
-  height: 2px
   overflow: visible
   box-sizing: content-box
+  height: 0
 
 // 1. Correct the inheritance and scaling of font size in all browsers.
 // 2. Correct the odd `em` font sizing in all browsers.
@@ -219,23 +214,22 @@ textarea
 // 2. Correct the outline style in Safari.
 
 [type="search"]
-  -webkit-appearance: textfield
   // 1
-  outline-offset: -2px
+  -webkit-appearance: textfield
   // 2
+  outline-offset: -2px
+  // Remove the inner padding in Chrome and Safari on macOS.
   &::-webkit-search-decoration
     -webkit-appearance: none
-
-// Remove the inner padding in Chrome and Safari on macOS.
 
 // 1. Correct the inability to style clickable types in iOS and Safari.
 // 2. Change font properties to `inherit` in Safari.
 
-\::-webkit-file-upload-button
-  -webkit-appearance: button
+::-webkit-file-upload-button
   // 1
-  font: inherit
+  -webkit-appearance: button
   // 2
+  font: inherit
 
 // Interactive
 // ==========================================================================
@@ -255,10 +249,12 @@ summary
 
 // Add the correct display in IE 10+.
 
-template, [hidden]
+template
   display: none
 
 // Add the correct display in IE 10.
 
-*
-  box-sizing: border-box
+[hidden]
+  display: none
+
+// sass-lint:enable-all

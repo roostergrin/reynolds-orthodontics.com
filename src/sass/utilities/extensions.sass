@@ -1,7 +1,19 @@
-// @import './extensions/buttons.sass' --does not exist
+@import './extensions/buttons.sass'
 @import './extensions/images.sass'
-@import './extensions/flex-classes.sass'
 @import './extensions/transitions.sass'
 
 .body-stop
   overflow: hidden
+
+.sr-only
+  position: absolute
+  margin: -1px
+  border: none
+  padding: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+
+.danger
+  color: $danger

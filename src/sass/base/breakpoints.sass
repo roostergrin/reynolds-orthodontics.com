@@ -1,0 +1,43 @@
+@mixin desktop
+  @media screen and (min-width: $screen-desktop)
+    @content
+
+@mixin laptop-lg
+  @media screen and (max-width: $screen-laptop-lg)
+    @content
+
+@mixin laptop
+  @media screen and (max-width: $screen-laptop)
+    @content
+
+@mixin tablet-lg
+  @media screen and (max-width: $screen-tablet-lg) and (max-height: 1366px)
+    @content
+
+@mixin tablet-land-lg
+  @media screen and (max-width: 1366px) and (max-height: $screen-tablet-lg)
+    @content
+
+@mixin tablet
+  @media screen and (max-width: $screen-tablet)
+    @content
+
+@mixin tablet-land
+  @media screen and (max-width: $screen-tablet-lg) and (max-height: $screen-tablet)
+    @content
+
+@mixin phone-lg
+  @media screen and (max-width: $screen-phone-lg)
+    @content
+
+@mixin phone-land-lg
+  @media screen and (max-width: 900px) and (max-height: $screen-phone-lg)
+    @content
+
+@mixin phone
+  @media screen and (max-width: $screen-phone)
+    @content
+
+@mixin phone-land
+  @media screen and (max-width: 750px) and (max-height: $screen-phone)
+    @content
