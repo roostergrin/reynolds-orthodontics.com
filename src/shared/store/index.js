@@ -8,14 +8,10 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     app: {},
-    pages: {},
-    nav: {},
     // blog: {},
-    body: {},
-    types: {},
-    showModal: {},
-    modalContent: {},
-    loading: true
+    loading: true,
+    pages: {},
+    scrolled: {}
   },
   mutations: mutations,
   actions: actions
