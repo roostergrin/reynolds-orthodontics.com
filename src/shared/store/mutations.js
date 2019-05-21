@@ -16,7 +16,7 @@ const mutations = {
     state.loading = false
   },
   [SET_SCROLLED] (state, data) {
-    state.scrolling = data
+    state.scrolled = data
   }
 }
 
