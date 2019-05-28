@@ -33,4 +33,13 @@ const router = new VueRouter({
   scrollBehavior
 })
 
+router.beforeEach((to, from, next) => {
+  /* eslint-disable */
+  if (to.hash === "") {
+    /* eslint-enable */
+    window.scrollTo(0, 0)
+  }
+  next()
+})
+
 export default router
