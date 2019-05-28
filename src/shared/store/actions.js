@@ -1,17 +1,40 @@
 import axios from 'axios'
 import api from 'api'
 import {
-  GET_PAGES,
-  // GET_BLOG,
   GET_APP,
-  VIEW_NAV,
-  VIEW_BODY,
-  VIEW_TYPES,
-  VIEW_SHOWMODAL,
-  VIEW_MODALCONTENT
+  // GET_BLOG,
+  GET_PAGES,
+  SET_SCROLLED
 } from './mutation-types'
 
 const actions = {
+  GET_APP ({ commit }) {
+    (async () => {
+      try {
+        const response = await axios.get(`${api}/wp/v2/app`)
+        const data = response.data.reduce(
+          (allData, data) => ({ ...allData, [data.slug]: { ...data.acf } }),
+          {}
+        )
+        commit(GET_APP, data)
+      } catch (e) { console.log('APP API: ' + e) }
+    })()
+  },
+  // GET_BLOG ({ commit }) {
+  //   (async () => {
+  //     try {
+  //       const response = await axios.get(`${api}/wp/v2/posts?per_page=10&_embed`)
+  //       const data = response.data.reduce((blogList, blog) => {
+  //         const newBlog = { slug: blog.slug, categories: blog.categories, ...blog.acf }
+  //         blogList.push(newBlog)
+  //         return blogList
+  //       }, [])
+  //       commit(GET_BLOG, data)
+  //     } catch (e) {
+  //       console.log(e)
+  //     }
+  //   })()
+  // },
   GET_PAGES ({ commit }) {
     (async () => {
       try {
@@ -35,42 +58,8 @@ const actions = {
       }
     })()
   },
-  GET_APP ({ commit }) {
-    (async () => {
-      try {
-        const response = await axios.get(`${api}/wp/v2/app`)
-        const data = response.data.reduce(
-          (allData, data) => ({ ...allData, [data.slug]: { ...data.acf } }),
-          {}
-        )
-        commit(GET_APP, data)
-      } catch (e) { console.log('APP API: ' + e) }
-    })()
-  },
-  // GET_BLOG ({ commit }) {
-  //   (async () => {
-  //     try {
-  //       const response = await axios.get(`${api}/wp/v2/posts?per_page=10&_embed`)
-  //       commit(GET_BLOG, response)
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   })()
-  // },
-  VIEW_NAV ({ commit }, data) {
-    commit(VIEW_NAV, data)
-  },
-  VIEW_BODY ({ commit }, data) {
-    commit(VIEW_BODY, data)
-  },
-  VIEW_TYPES ({ commit }, data) {
-    commit(VIEW_TYPES, data)
-  },
-  VIEW_SHOWMODAL ({ commit }, data) {
-    commit(VIEW_SHOWMODAL, data)
-  },
-  VIEW_MODALCONTENT ({ commit }, data) {
-    commit(VIEW_MODALCONTENT, data)
+  SET_SCROLLED ({ commit }, data) {
+    commit(SET_SCROLLED, data)
   }
 }
 
