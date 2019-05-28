@@ -6,9 +6,9 @@ import router from './router'
 import store from './shared/store'
 
 /* eslint-disable */
+import Components from './resources/components'
 import { vendors } from './resources/vendors'
 import { fonts } from './resources/fonts'
-import { Icon } from './resources/components'
 /* eslint-enable */
 
 Vue.config.productionTip = false
