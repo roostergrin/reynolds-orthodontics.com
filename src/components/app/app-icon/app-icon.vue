@@ -1,8 +1,12 @@
-<template lang='pug' src='./icon.pug'></template>
+<template lang='pug' src='./app-icon.pug'></template>
 
 <script>
 export default {
-  props: ['name'],
+  props: {
+    name: {
+      type: String
+    }
+  },
   computed: {
     svg () {
       return require(`@/assets/icons/${this.name}.svg`)
