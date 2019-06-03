@@ -11,7 +11,7 @@ export default {
     alt: {
       // only necessary if the image is more than decorative
       type: String,
-      default: 'I am a decorative image.'
+      default: document.location.hostname + ' image for section.'
     }
   },
   data () {
@@ -19,6 +19,7 @@ export default {
       currentImg: null,
       compSrc: '@/assets/error.png',
       loaded: false,
+      altText: this.alt,
       intersectionOptions: {
         root: null,
         rootMargin: '0px 0px 0px 0px',
@@ -38,7 +39,7 @@ export default {
       this.compSrc = this.src.split(/\.(?=[^.]+$)/).join('-compressed.')
       this.currentImg = this.compSrc
     },
-    onWaypoint ({ going, direction }) {
+    trigger ({ going, direction }) {
       if (going === 'in') {
         // once waypoint is triggered the full image load is triggered
         this.currentImg = this.src
