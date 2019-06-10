@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Styleguide from '@/pages/styleguide/styleguide'
+import StyleGuide from '@/pages/style-guide/style-guide'
 import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
@@ -18,10 +18,10 @@ const router = new VueRouter({
       component: Home
     },
     {
-      path: '/styleguide',
-      name: 'Styleguide',
+      path: '/style-guide',
+      name: 'style guide',
       navigation: false,
-      component: Styleguide
+      component: StyleGuide
     },
     {
       path: '/*',

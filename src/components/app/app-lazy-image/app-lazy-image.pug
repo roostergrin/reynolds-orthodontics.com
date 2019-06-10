@@ -1,7 +1,7 @@
 .app-lazy-image(
   v-if='loaded'
   role='img'
-  :aria-label='alt'
+  :aria-label='altText'
   :style="{ backgroundImage: 'url(' + currentImg + ')' }"
-  v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }")
-  img(:alt='alt', style='visibility: hidden; height: 0;')
+  v-waypoint="{ active: true, callback: trigger, options: intersectionOptions }")
+  img(:alt='altText', style='visibility: hidden; height: 0;')

@@ -1,0 +1,59 @@
+.style-guide
+  padding: 6rem 0
+  &__container
+    @extend .container
+
+    &-lg
+      @extend .container--large
+
+  &__col
+    min-height: 7rem
+    div
+      width: 100%
+      height: 100%
+
+  &__col-1
+    @extend .col-5
+    @extend .col-8--tablet
+    div
+      background: tomato
+
+  &__col-2
+    @extend .col-2
+    @extend .col-4--tablet
+    div
+      background: blue
+
+  &__col-3
+    @extend .col-2--offset
+    @extend .col-3
+    div
+      background: yellow
+
+  &__col-4
+    @extend .col-4
+    @extend .col-7--tablet
+    div
+      background: green
+
+  &__col-5
+    @extend .col-3
+    @extend .col-2--offset
+    @extend .col-7--tablet
+    div
+      background: purple
+
+  &__col-6
+    @extend .col-5
+    div
+      background: orange
+
+  &__image
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    min-width: 15rem
+    min-height: 15rem
+
+  &__divider
+    min-height: 100vh
