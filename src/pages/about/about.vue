@@ -1,11 +1,11 @@
-<template lang="pug" src="./home.pug"></template>
+<template lang="pug" src="./about.pug"></template>
 
 <script>
 
 export default {
   computed: {
     props () {
-      return this.$store.state.pages.home
+      return this.$store.state.pages.about
     }
   },
   components: {
