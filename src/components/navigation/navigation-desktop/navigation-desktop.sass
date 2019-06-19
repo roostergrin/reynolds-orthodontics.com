@@ -1,3 +1,17 @@
 .navigation-desktop
-  span
-    margin: auto rem-calc(6)
+
+  &__navbar
+    display: flex
+    position: fixed
+    top: 0
+    justify-content: center
+    background: $c3-alt
+    padding: 1rem 2rem
+    width: 100%
+
+  &__link
+    @extend .nav-link
+
+  &__nav-item
+    display: inline-block
+    margin: 0 1rem

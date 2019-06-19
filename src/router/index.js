@@ -41,7 +41,7 @@ const router = new VueRouter({
     },
     {
       path: '/contact',
-      name: 'home',
+      name: 'Contact',
       navigation: true,
       component: ContactPage
     },

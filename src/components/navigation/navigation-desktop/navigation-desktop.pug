@@ -1,3 +1,6 @@
 .navigation-desktop
-  span.nav-link(v-for='link in links')
-    router-link(:to='link.path', v-html='link.name')
+  .navigation-desktop__navbar
+    ul.navigation-desktop__menu
+      li.navigation-desktop__nav-item(v-for='link, i in links', :key='i')
+          router-link.navigation-desktop__link(:to='link.path' v-html='link.name')
+  
