@@ -7,44 +7,58 @@ body
   @include phone
     font-size: 14px
   text-rendering: optimizeLegibility
-  line-height: 1.467
+  line-height: 1.28
+  color: $c4
   font-family: $font
   font-size: 16px
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
 h1
-  line-height: 1.25
+  text-transform: uppercase
+  line-height: 1.4
+  color: $c1
+  font-family: $font-alt
   font-size: 36px
+  font-weight: bold
 
 h2
-  line-height: 1.25
-  letter-spacing: 2.8px
-  font-size: 22px
+  text-transform: uppercase
+  font-family: $font-alt
+  font-size: 26px
 
 h3
-  line-height: 1.12
-  font-size: 22px
-  font-weight: 700
-
-h4
-  line-height: 1.12
-  font-size: 18px
+  letter-spacing: 1px
+  color: $c1
+  font-family: $font-alt
+  font-size: 26px
 
 a
   text-decoration: none
-  color: $black
+  color: $c4
 
-p
+p, ul, h2, h3
   margin: 0
 
+ul
+  padding: 0
+
+li
+  list-style: none
+
+input[type=text]
+  -webkit-appearance: none
+
 .hero-text
-  line-height: 1.25
-  font-size: 52px
+  text-transform: uppercase
+  color: $white
+  font-family: $font-alt
+  font-size: 36px
   font-weight: bold
 
-.p2
+.nav-link
+  text-transform: uppercase
+  color: $c5
+  font-family: $font-alt
   font-size: 15px
-
-.p3
-  font-size: 12px
+  font-weight: 700

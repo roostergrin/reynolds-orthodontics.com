@@ -1,0 +1,39 @@
+<svg id="b6d4a91f-81b5-46f5-8fb0-53050118568b" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.05 50">
+  <defs>
+    <style>
+      .a302c838-bc19-45c0-9aae-00c6e64d51ed {
+        fill: #fff;
+      }
+
+      .a302c838-bc19-45c0-9aae-00c6e64d51ed, .bbc5f444-0e5b-4c09-a155-bc4d6b1f200b, .f8eefc67-d5ca-4eca-b744-64079df4873b {
+        fill-rule: evenodd;
+      }
+
+      .a46af1bc-5f09-4390-aae6-15136e01aac4 {
+        mask: url(#a51166c7-a46b-4af2-a2bc-42de9dbc63cd);
+      }
+
+      .bbc5f444-0e5b-4c09-a155-bc4d6b1f200b {
+        fill: #3facdb;
+      }
+
+      .f8eefc67-d5ca-4eca-b744-64079df4873b {
+        fill: #173a86;
+      }
+    </style>
+    <mask id="a51166c7-a46b-4af2-a2bc-42de9dbc63cd" x="-34.9" y="0" width="102.54" height="93.55" maskUnits="userSpaceOnUse">
+      <g id="a6f2ef9d-70f0-489c-b008-9824569767c4" data-name="b">
+        <path id="eda8c26b-1174-4c8e-8af0-c7c5f9ce1ed4" data-name="a" class="a302c838-bc19-45c0-9aae-00c6e64d51ed" d="M-34.9,93.55H67.64V0H-34.9Z"/>
+      </g>
+    </mask>
+  </defs>
+  <title>logo-bg</title>
+  <g>
+    <g class="a46af1bc-5f09-4390-aae6-15136e01aac4">
+      <path class="bbc5f444-0e5b-4c09-a155-bc4d6b1f200b" d="M17.5,47.4A21.56,21.56,0,0,1,1.05,44.75l-1,1.7A23.56,23.56,0,0,0,12.43,50,24.28,24.28,0,0,0,18,49.35,23.66,23.66,0,0,0,32.71,38.7L31,37.65A21.59,21.59,0,0,1,17.5,47.4M30,17.44a4.31,4.31,0,1,0,4.31,4.31A4.31,4.31,0,0,0,30,17.44m0,13.37a9.06,9.06,0,1,1,9.06-9.06A9.07,9.07,0,0,1,30,30.81"/>
+    </g>
+    <g class="a46af1bc-5f09-4390-aae6-15136e01aac4">
+      <path class="f8eefc67-d5ca-4eca-b744-64079df4873b" d="M6.37,33.47V18.11A18.16,18.16,0,0,1,24.34,0h8.38V7.44h-7.4v0l-1,0A10.71,10.71,0,0,0,13.8,18.11V33.47Z"/>
+    </g>
+  </g>
+</svg>

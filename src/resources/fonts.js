@@ -9,7 +9,7 @@ var WebFont = require('webfontloader')
 const fonts = () => {
   WebFont.load({
     google: {
-      families: [ 'Open+Sans:400,600' ]
+      families: [ 'Oxygen:400,700', 'Montserrat' ]
     }
   })
 }
