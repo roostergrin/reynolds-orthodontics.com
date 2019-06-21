@@ -9,7 +9,7 @@ export default {
     links: {
       Type: Array
     },
-    scrolling: {
+    fixed: {
       Type: Boolean
     }
   }
