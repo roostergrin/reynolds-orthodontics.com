@@ -1,3 +1,4 @@
-.pages-home(v-if='props') 
-  h1 {{ props.title }}
+.pages-home(v-if='props' style='height: 2000px')
+  HeroComponent(:props='props.hero')
+  h1(style='margin-top: 53px;') {{ props.title }}
   p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

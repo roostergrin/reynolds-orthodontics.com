@@ -1,6 +1,7 @@
 <template lang="pug" src="./home.pug"></template>
 
 <script>
+import HeroComponent from 'components/hero/hero'
 
 export default {
   computed: {
@@ -9,6 +10,7 @@ export default {
     }
   },
   components: {
+    HeroComponent
   }
 }
 </script>
