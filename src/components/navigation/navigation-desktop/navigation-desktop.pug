@@ -1,5 +1,13 @@
-.navigation-desktop(:class="{ 'navigation-desktop--fixed': fixed}")
+.navigation-desktop(:class="{ 'navigation-desktop--fixed': fixed}" v-if='props')
+  .navigation-desktop__topbar
+    a.navigation-desktop__phone(:href='props.phone.phone_link')
+      AppIcon.navigation-desktop__phone-icon(name='phone')
+    .navigation-desktop__social-links
+      a.navigation-desktop__social-link(v-for='social, i in props.social_media', :href='social.link' target='_blank' rel='noreferrer noopener')
+        AppIcon.navigation-desktop__social-icon(:name='social.icon')
   .navigation-desktop__navbar
+    router-link.navigation-desktop__home(to='/')
+      AppIcon.navigation-desktop__logo(name='logo-main')
     ul.navigation-desktop__menu
       li.navigation-desktop__nav-item(v-for='link, i in links', :key='i', :class="{ 'navigation-desktop__nav-item--active': $route.path === link.path}")
         router-link.navigation-desktop__link(:to='link.path' v-html='link.name')

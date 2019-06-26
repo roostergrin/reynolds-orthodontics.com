@@ -17,6 +17,9 @@ export default {
     },
     fixed () {
       return this.windowHeight > 553
+    },
+    props () {
+      return this.$store.state.app.nav
     }
   },
   mounted () {
