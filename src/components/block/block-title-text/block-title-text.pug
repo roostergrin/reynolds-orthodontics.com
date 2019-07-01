@@ -1,0 +1,7 @@
+.block-title-text
+  .block-title-text__container
+    .block-title-text__col
+      h3.block-title-text__title(v-html='content.title')
+      .block-title-text__body(v-html='content.body')
+      .block-title-text__button-box
+        router-link.block-title-text__button(:to='content.button.href' v-html='content.button.label')
