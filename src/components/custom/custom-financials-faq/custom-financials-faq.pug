@@ -1,0 +1,17 @@
+.custom-financials-faq
+  .custom-financials-faq__container
+    .custom-financials-faq__col
+      h3.custom-financials-faq__title(v-html='content.title')
+      .custom-financials-faq__body(v-html='content.body')
+      .custom-financials-faq__faq(
+        v-for='(faq, i) in content.faqs'
+        :key='"faq - " + i'
+        @click='toggleAccordion(i)')
+        .custom-financials-faq__faq-question(
+          :class="{ 'custom-financials-faq__faq-question--showing': accordionShowing === i }"
+          v-html='faq.question')
+        .custom-financials-faq__faq-drawer(
+          :class="{ 'custom-financials-faq__faq-drawer--showing': accordionShowing === i }")
+          .custom-financials-faq__faq-answer(
+            v-html='faq.answer'
+            :class="{ 'custom-financials-faq__faq-answer--showing': accordionShowing === i }")

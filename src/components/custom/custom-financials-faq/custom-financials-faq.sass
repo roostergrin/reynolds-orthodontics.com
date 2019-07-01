@@ -1,0 +1,60 @@
+.custom-financials-faq
+  @include phone-lg
+    padding: 0 0 4rem
+  padding: 0 0 6rem
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-8
+    @extend .col-2--offset
+
+  &__body
+    padding: 2rem 0 1rem
+
+  &__faq
+    padding: 1rem 0
+
+    &-question
+      position: relative
+      border: 1px solid $c4
+      padding: 1rem
+      color: $c1
+
+      &:after
+        position: absolute
+        top: calc(50% - .35rem)
+        right: 1rem
+        transform: translateY(-50%)
+        transition: transform .35s ease-in
+        border: .75rem solid transparent
+        border-bottom-color: $c2
+        content: ''
+        transform-origin: 50% 25%
+
+      &--showing
+        &:after
+          transform: translateY(50%) rotate(180deg)
+
+    &-drawer
+      transition: border .35s ease-in-out, height .35s ease-in-out, padding .35s ease-in-out
+      border: solid $c4
+      border-width: 0
+      border-top-color: transparent
+      background: $c3-alt
+      height: 0
+      pointer-events: none
+
+      &--showing
+        border-width: 1px
+        padding: 1rem
+        height: 25rem
+        pointer-events: all
+
+    &-answer
+      opacity: 0
+
+      &--showing
+        transition: opacity .25s ease-in .3s
+        opacity: 1

@@ -1,0 +1,35 @@
+.custom-new-forms
+  @include phone-lg
+    padding: 4rem 0
+  padding: 6rem 0
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-8
+    @extend .col-2--offset
+
+  &__body
+    padding: 2rem 0 1rem
+
+    ul
+      padding-left: 1.5rem
+
+    li
+      padding: .5rem 0
+      list-style: circle
+
+      &:first-child
+        padding-top: 0
+
+  &__buttons
+    @include tablet
+      flex-wrap: wrap
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+  &__button
+    @extend .button
+    margin-top: 1rem

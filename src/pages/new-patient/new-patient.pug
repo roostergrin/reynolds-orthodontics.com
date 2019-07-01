@@ -1,2 +1,4 @@
-.pages-new-patient(v-if='props') 
-  h1 {{ props.title }}
+.pages-new-patient(v-if='props')
+  HeroComponent(:props='props.hero')
+  BlockTitleText(:content='props.title_text')
+  CustomNewForms(:content='props.forms')
