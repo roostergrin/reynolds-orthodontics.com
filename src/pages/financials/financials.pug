@@ -1,2 +1,4 @@
-.pages-financials(v-if='props') 
-  h1 {{ props.title }}
+.pages-financials(v-if='props' style='height: 2000px')
+  HeroComponent(:props='props.hero')
+  BlockTitleText(:content='props.title_text')
+  CustomFinancialsFaq(:content='props.faq')
