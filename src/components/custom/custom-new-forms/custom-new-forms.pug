@@ -1,0 +1,11 @@
+.custom-new-forms
+  .custom-new-forms__container
+    .custom-new-forms__col
+      h3.custom-new-forms__title(v-html='content.title')
+      .custom-new-forms__body(v-html='content.body')
+      .custom-new-forms__buttons
+        router-link.custom-new-forms__button(
+          v-for='(button, i) in content.buttons'
+          :key='"button - " + i'
+          :to='button.href'
+          v-html='button.label')
