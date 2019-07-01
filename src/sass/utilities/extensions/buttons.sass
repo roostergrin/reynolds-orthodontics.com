@@ -1,4 +1,18 @@
 .button
+  display: inline-block
+  transition: background .15s ease-in
+  border-radius: 1rem
+  background: $c2
+  padding: .5rem 2rem
+  text-align: center
+  color: $white
+
+  &:hover
+    transition: background .25s ease-in
+    // sasslint:disable-all
+    background: darken($c2, 15%)
+    // sasslint:enable-all
+
   &--outline
     display: block
     transition: background-color .2s ease, color .2s ease
