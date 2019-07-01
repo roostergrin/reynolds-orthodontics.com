@@ -31,7 +31,26 @@ const router = new VueRouter({
       path: '/treatments',
       name: 'Treatments',
       navigation: true,
-      component: TreatmentsPage
+      component: TreatmentsPage,
+      children: [
+        {
+          path: '/treatments#kids-club',
+          label: 'kids club'
+        },
+        {
+          path: '/treatments#teen',
+          label: 'teen'
+        },
+        {
+          path: '/treatments#adult',
+          label: 'adult'
+        },
+        {
+          path: '/treatments#treatment-options',
+          label: 'treatment options',
+          icon: 'teeth'
+        }
+      ]
     },
     {
       path: '/new-patient',
