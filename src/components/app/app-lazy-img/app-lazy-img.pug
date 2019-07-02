@@ -1,0 +1,11 @@
+.app-lazy-img(
+  v-if='loaded'
+  role='img'
+  :aria-label='alt'
+  :style="{ backgroundImage: 'url(' + currentImg + ')' }"
+  v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }")
+  .app-lazy-img__overlay.img-centered(:style="{ backgroundColor: bgColor }" v-if='loading')
+    .app-lazy-img__overlay-gif.img-centered(:style="{ backgroundImage: 'url(' + animatedGif + ')', maxHeight: '3rem', maxWidth: '3rem' }")
+  .app-lazy-img__image(
+    ref='image'
+    style='visibility: hidden; height: 0;')
