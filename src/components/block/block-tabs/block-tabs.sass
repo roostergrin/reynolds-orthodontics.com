@@ -6,12 +6,12 @@
   &__background,
   &__content-background
     @extend .image
-    z-index: -2
 
   &__background-overlay,
   &__content-overlay
     @extend .image
-    z-index: -1
+
+  &__background-overlay
     background: $ol2
 
   &__container
@@ -24,6 +24,8 @@
     @extend .col-4
 
   &__title
+    position: relative
+    z-index: 1
     padding-bottom: 4rem
     text-align: center
     color: $c2
@@ -33,19 +35,20 @@
     position: relative
     align-items: center
     justify-content: center
-    transition: transform .15s ease-in-out
+    transition: transform .3s cubic-bezier(.39, .575, .28, .995)
     cursor: pointer
     min-height: 25rem
     text-transform: uppercase
 
     &-overlay
-      transition: background .15s ease-in-out
-      background: $ol1
+      transition: background .3s ease
+      background: $ol1--alt
 
     &-title
       position: relative
       left: 1rem
-      transition: color .15s ease-in-out
+      transition: color .3s ease, transform .3s cubic-bezier(0, 0, 0.2, 1)
+      z-index: 2
       padding-right: 2rem
       overflow: hidden
       color: $white
@@ -55,7 +58,8 @@
         top: calc(50% + .15rem)
         right: 0
         transform: translateY(-50%) translateX(2rem)
-        transition: transform .15s ease-in
+        transition: transform .35s cubic-bezier(0, 0, 0.2, 1), opacity .25s ease-in
+        opacity: 0
         border: .75rem solid transparent
         border-left-color: $c1
         content: ''
@@ -63,28 +67,27 @@
 
     &:hover
       transform: scale(1.05)
-      transition: transform .25s ease-in-out
+      z-index: 1
 
       .block-tabs__content-overlay
-        transition: background .35s ease-in-out
-        background: $ol2
+        z-index: 1
+        background: $ol2--alt
 
       .block-tabs__content-title
-        transition: color .35s ease-in-out
         color: $c1
         &:after
           transform: translateY(-50%) translateX(0)
-          transition: transform .35s ease-in
+          opacity: 1
 
   &__modal
     @extend .image
     position: fixed
-    transition: opacity .25s ease-in-out
+    transition: opacity .25s ease
     opacity: 0
     pointer-events: none
 
     &--showing
-      transition: opacity .5s ease-in-out
+      transition: opacity .5s ease
       opacity: 1
       z-index: 99999
       pointer-events: all
