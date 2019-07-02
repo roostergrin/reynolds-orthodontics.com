@@ -1,2 +1,102 @@
 .block-tabs
+  position: relative
   padding: 6rem 0
+  overflow: hidden
+
+  &__background,
+  &__content-background
+    @extend .image
+    z-index: -2
+
+  &__background-overlay,
+  &__content-overlay
+    @extend .image
+    z-index: -1
+    background: $ol2
+
+  &__container
+    @extend .container
+
+  &__title-col
+    @extend .col-12
+
+  &__col
+    @extend .col-4
+
+  &__title
+    padding-bottom: 4rem
+    text-align: center
+    color: $c2
+
+  &__content
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    transition: transform .15s ease-in-out
+    cursor: pointer
+    min-height: 25rem
+    text-transform: uppercase
+
+    &-overlay
+      transition: background .15s ease-in-out
+      background: $ol1
+
+    &-title
+      position: relative
+      left: 1rem
+      transition: color .15s ease-in-out
+      padding-right: 2rem
+      overflow: hidden
+      color: $white
+
+      &:after
+        position: absolute
+        top: calc(50% + .15rem)
+        right: 0
+        transform: translateY(-50%) translateX(2rem)
+        transition: transform .15s ease-in
+        border: .75rem solid transparent
+        border-left-color: $c1
+        content: ''
+        transform-origin: 50% 25%
+
+    &:hover
+      transform: scale(1.05)
+      transition: transform .25s ease-in-out
+
+      .block-tabs__content-overlay
+        transition: background .35s ease-in-out
+        background: $ol2
+
+      .block-tabs__content-title
+        transition: color .35s ease-in-out
+        color: $c1
+        &:after
+          transform: translateY(-50%) translateX(0)
+          transition: transform .35s ease-in
+
+  &__modal
+    @extend .image
+    position: fixed
+    transition: opacity .25s ease-in-out
+    opacity: 0
+    pointer-events: none
+
+    &--showing
+      transition: opacity .5s ease-in-out
+      opacity: 1
+      z-index: 99999
+      pointer-events: all
+
+    &-overlay
+      @extend .image
+      background: $ol1
+
+    &-container
+      @extend .image
+      background: $white
+      width: calc(100% - 2rem)
+      max-width: 65rem
+      height: calc(100% - 2rem)
+      max-height: 35rem
