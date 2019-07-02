@@ -40,7 +40,6 @@ export default {
         this.currentImg = this.src
         downloadingImage.onload = () => {
           this.loading = false
-          console.log('loaded')
         }
         downloadingImage.src = this.src
       }
