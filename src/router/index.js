@@ -35,15 +35,18 @@ const router = new VueRouter({
       children: [
         {
           path: '/treatments#kids-club',
-          label: 'kids club'
+          label: 'kids club',
+          background: '/static/navigation-kid-bg.jpg'
         },
         {
           path: '/treatments#teen',
-          label: 'teen'
+          label: 'teen',
+          background: '/static/navigation-teen-bg.jpg'
         },
         {
           path: '/treatments#adult',
-          label: 'adult'
+          label: 'adult',
+          background: '/static/navigation-adult-bg.jpg'
         },
         {
           path: '/treatments#treatment-options',

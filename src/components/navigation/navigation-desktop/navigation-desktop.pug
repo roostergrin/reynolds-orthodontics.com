@@ -15,8 +15,8 @@
             
           .navigation-desktop__dropdown
             .navigation-desktop__dropdown-container
-              .navigation-desktop__sublink(v-for='sublink, j in link.children', :key='j')
-                .navigation-desktop__overlay
+              .navigation-desktop__sublink(v-for='sublink, j in link.children', :key='j', :class="{ 'navigation-desktop__sublink--icon': sublink.icon }")
+                .navigation-desktop__overlay(v-if='sublink.background')
                 .navigation-desktop__bg(v-if='sublink.background', :style="{ backgroundImage: 'url(' + sublink.background + ')' }")
                 AppIcon.navigation-desktop__sublink-icon(:name='sublink.icon' v-if='sublink.icon')  
-                router-link.navigation-desktop__label(v-html='sublink.label', :to='sublink.path')
+                router-link.navigation-desktop__label(v-html='sublink.label', :to='sublink.path', :class="{ 'navigation-desktop__label--small': sublink.icon }")
