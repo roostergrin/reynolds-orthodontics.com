@@ -43,7 +43,9 @@ module.exports = {
       api: resolve('./src/shared/api/api'),
       directives: resolve('./src/shared/directives'),
       templates: resolve('./src/shared/templates'),
-      svg: resolve('/src/assets/svg')
+      svg: resolve('/src/assets/svg'),
+      custom: resolve('/src/components/custom'),
+      block: resolve('/src/components/block')
     }
   },
   module: {

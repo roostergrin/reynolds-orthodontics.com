@@ -1,0 +1,52 @@
+.custom-home-welcome
+  @include tablet
+    padding: 3rem 0
+    height: 100%
+  position: relative
+  padding: rem-calc(50) 0 0
+  height: 588px
+
+  &__container
+    @extend .container
+    align-items: center
+    height: 100%
+
+  &__content
+    @extend .col-7
+    @extend .col-5--offset
+
+  &__image
+    @include tablet
+      display: none
+    @extend .image--bg
+    background-position: 25%
+
+  &__title
+    @extend h3
+
+  &__text
+    margin: 2rem 0 3rem
+
+  &__title, &__text
+    @include tablet
+      text-align: center
+
+  &__link
+    @include tablet
+      display: block
+      margin: 0 auto
+    display: inline-block
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease
+    border-radius: 20px
+    background: $c2
+    padding: rem-calc(8)
+    width: 225px
+    text-align: center
+    color: $white
+    font-size: 16px
+    font-weight: 600
+
+    &:hover
+      transform: translateY(-2px)
+      box-shadow: $bs1
+      background: $c2--hover

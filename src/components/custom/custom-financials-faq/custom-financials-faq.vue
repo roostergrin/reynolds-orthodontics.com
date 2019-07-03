@@ -4,7 +4,7 @@
 export default {
   props: {
     content: {
-      type: [Object, Array]
+      Type: [Object, Array]
     }
   },
   data () {

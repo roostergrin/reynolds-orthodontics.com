@@ -22,6 +22,7 @@
 
   &__col
     @extend .col-4
+    padding: 0
 
   &__title
     position: relative
@@ -58,7 +59,7 @@
         top: calc(50% + .15rem)
         right: 0
         transform: translateY(-50%) translateX(2rem)
-        transition: transform .35s cubic-bezier(0, 0, 0.2, 1), opacity .25s ease-in
+        transition: transform .35s cubic-bezier(0, 0, 0.2, 1), opacity .25s ease-in, box-shadow .2s ease
         opacity: 0
         border: .75rem solid transparent
         border-left-color: $c1
@@ -68,6 +69,7 @@
     &:hover
       transform: scale(1.05)
       z-index: 1
+      box-shadow: 0 4px 8px -4px rgba($black, .45)
 
       .block-tabs__content-overlay
         z-index: 1

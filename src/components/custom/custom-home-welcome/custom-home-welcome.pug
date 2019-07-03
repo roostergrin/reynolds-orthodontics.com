@@ -1,0 +1,9 @@
+.custom-home-welcome
+  AppLazyBg.custom-home-welcome__image(:src='content.image')
+  .custom-home-welcome__container
+    .custom-home-welcome__content
+      .custom-home-welcome__title(v-html='content.title')
+      .custom-home-welcome__text(v-html='content.text')
+      router-link.custom-home-welcome__link(to='/about') Find Out More      
+      
+  

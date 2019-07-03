@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import StyleGuide from '@/pages/style-guide/style-guide'
+import StyleGuide from 'pages/style-guide/style-guide'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
-const AboutPage = () => import('@/pages/about/about')
-const ContactPage = () => import('@/pages/contact/contact')
-const FinancialsPage = () => import('@/pages/financials/financials')
-const HomePage = () => import('@/pages/home/home')
-const NewPatientPage = () => import('@/pages/new-patient/new-patient')
-const TreatmentsPage = () => import('@/pages/treatments/treatments')
+const AboutPage = () => import('pages/about/about')
+const ContactPage = () => import('pages/contact/contact')
+const FinancialsPage = () => import('pages/financials/financials')
+const HomePage = () => import('pages/home/home')
+const NewPatientPage = () => import('pages/new-patient/new-patient')
+const TreatmentsPage = () => import('pages/treatments/treatments')
 
 Vue.use(VueRouter)
 
