@@ -24,21 +24,21 @@
 
       &:after
         position: absolute
-        top: calc(50% - .35rem)
+        top: 50%
         right: 1rem
         transform: translateY(-50%)
-        transition: transform .35s ease-in
+        transition: transform .35s cubic-bezier(.89, .1, .44, .95)
         border: .75rem solid transparent
-        border-bottom-color: $c2
+        border-left-color: $c2
         content: ''
-        transform-origin: 50% 25%
+        transform-origin: 50%
 
       &--showing
         &:after
-          transform: translateY(50%) rotate(180deg)
+          transform: translateY(-10%) rotate(90deg)
 
     &-drawer
-      transition: border .35s ease-in-out, height .35s ease-in-out, padding .35s ease-in-out
+      transition: border .35s ease-in-out, height .35s cubic-bezier(.89, .1, .44, .95), padding .35s ease-in-out
       border: solid $c4
       border-width: 0
       border-top-color: transparent
@@ -47,6 +47,7 @@
       pointer-events: none
 
       &--showing
+        transition: height .45s cubic-bezier(.39, .575, .28, .995)
         border-width: 1px
         padding: 1rem
         height: 25rem

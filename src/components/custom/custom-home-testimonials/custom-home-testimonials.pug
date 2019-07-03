@@ -1,0 +1,14 @@
+.custom-home-testimonials
+  .custom-home-testimonials__container
+    .custom-home-testimonials__content-box
+      .custom-home-testimonials__bg(:style="{ backgroundImage: 'url(' + content.image + ')' }")
+      .custom-home-testimonials__col  
+        .custom-home-testimonials__slider
+          .custom-home-testimonials__title(v-html='content.title')  
+          AppIcon.custom-home-testimonials__quotes(name='quotes')
+          .custom-home-testimonials__slide    
+            transition-group(name='crossfade' tag='div')  
+              .custom-home-testimonials__content(v-for='slide, i in content.slides', :key='"slide-" + i' v-show='i === show' v-html='slide.testimonial')
+          .custom-home-testimonials__pagination
+            .custom-home-testimonials__dot(v-for='dot, j in content.slides.length', :key='j', :class="{ 'custom-home-testimonials__dot--active': j === show }" @click='goToSlide(j)')           
+  

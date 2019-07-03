@@ -4,7 +4,7 @@
 export default {
   props: {
     content: {
-      Type: Object
+      type: Object
     }
   }
 }
