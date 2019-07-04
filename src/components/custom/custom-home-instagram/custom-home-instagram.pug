@@ -1,0 +1,5 @@
+.custom-home-instagram
+  .custom-home-instagram__container
+    .custom-home-instagram__title Follow Us on Instagram
+    .custom-home-instagram__thumb(v-for='post, i in feed', :key='i', :href='post.link' target='_blank' rel='noopener noreferrer')
+      img.custom-home-instagram__image(:src='post.image')
