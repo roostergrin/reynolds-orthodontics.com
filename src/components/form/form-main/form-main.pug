@@ -1,0 +1,35 @@
+.form-main
+  form.form-main__form(@submit.prevent='validate' method='post')
+    
+    .form-main__group.form-main__group--inline
+      .form-main__item
+        span.form-main__label(:class="{ 'form-main__label--active': firstName !== '' || active === 'firstName' }" @click='focused("firstName")') First Name #[span.danger *]
+        input.form-main__input(name='firstName', v-model='firstName', v-validate="'required|alpha_spaces'", :class="{ 'form-main__input--error': errors.has('firstName') && !formSuccess }" type='text' @focus='focused("firstName")')
+        .form-main__message
+            span(v-show="errors.has('firstName') && !formSuccess") Please fill in your first name.
+          
+      .form-main__item
+        span.form-main__label(:class="{ 'form-main__label--active': lastName !== '' || active === 'lastName' }" @click='focused("lastName")') Last Name #[span.danger *]
+        input.form-main__input(name='lastName', v-model='lastName', v-validate="'required|alpha_spaces'", :class="{ 'form-main__input--error': errors.has('lastName') && !formSuccess }" type='text' @click='focused("lastName")')
+        .form-main__message
+            span(v-show="errors.has('lastName') && !formSuccess") Please fill in your last name.      
+    
+    .form-main__group.form-main__group--inline
+      .form-main__item
+        span.form-main__label(:class="{ 'form-main__label--active': email !== '' || active === 'email' }" @click='focused("email")') Email Address #[span.danger *]
+        input.form-main__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-main__input--error': errors.has('email') && !formSuccess }" @click='focused("email")')
+        .form-main__message
+          span(v-show="errors.has('email') && !formSuccess") Please enter a valid email.
+    
+      .form-main__item.form-main__item--not-required
+        span.form-main__label(:class="{ 'form-main__label--active': phone !== '' || active === 'phone' }" @click='focused("phone")') Phone Number
+        input.form-main__input(name='phone', v-model='phone' v-validate="'required|numeric'", :class="{ 'input': true, 'form-main__input--error': errors.has('phone') && !formSuccess }" @focus='focused("phone")')
+    
+    .form-main__group.form-main__group--inline
+      .form-main__item.form-main__item--not-required
+        span.form-main__label(:class="{ 'form-main__label--active': age !== '' || active === 'age' }" @click='focused("age")') Patient's Age
+        input.form-main__input.form-main__input(name='age', v-model='age'  @focus='focused("age")')
+    
+    .form-main__group--button
+      button.form-main__submit-button(@click='validate' type='submit', :disabled='formSubmitted')
+        span Send
