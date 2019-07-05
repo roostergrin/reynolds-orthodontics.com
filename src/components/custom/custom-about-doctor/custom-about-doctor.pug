@@ -1,0 +1,19 @@
+.custom-about-doctor
+  .custom-about-doctor__container
+    .custom-about-doctor__row
+      .custom-about-doctor__title(v-html='content.title')
+    .custom-about-doctor__row
+      AppLazyImg.custom-about-doctor__image(:src='content.image')
+      .custom-about-doctor__content(v-html='content.content')
+    .custom-about-doctor__row
+      .custom-about-doctor__tabs
+        .custom-about-doctor__tab(v-for='tab, j in content.tabs', :key='j' v-html='tab.label' @click='handleClick(j)', :class="{ 'custom-about-doctor__tab--active': show === j }")
+    .custom-about-doctor__row
+      transition-group.custom-about-doctor__transition(name='crossfade' tag='div')
+        .custom-about-doctor__content-box(v-for='content, i in content.wrapper', :key="'content-' + i " v-show='show === i')
+          .custom-about-doctor__item(v-for='item, k in content.logos', :key='k',  :class="{ 'custom-about-doctor__item--text': item.text }")
+            img.custom-about-doctor__logo(:src='item.logo', :alt='item.alt')
+            .custom-about-doctor__text(v-html='item.text' v-if='item.text')  
+            
+              
+            
