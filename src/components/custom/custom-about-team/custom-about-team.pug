@@ -1,0 +1,9 @@
+.custom-about-team
+  .custom-about-team__container.custom-about-team__container--title
+    .custom-about-team__title(v-html='content.title')
+  .custom-about-team__container(:class="{ 'custom-about-team__container--half': tiles === 'two', 'custom-about-team__container--third': tiles === 'three', 'custom-about-team__container--quarter': tiles === 'four' }")
+    .custom-about-team__tile(v-for='tile, i in content.tiles', :key='i')
+      AppLazyImg.custom-about-team__image(:src='tile.image', :alt='tile.name')
+      .custom-about-team__name-container
+        .custom-about-team__name(v-html='tile.name')
+        .custom-about-team__position(v-html='tile.position')

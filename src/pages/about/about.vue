@@ -3,6 +3,7 @@
 <script>
 import HeroComponent from 'components/hero/hero'
 import CustomDoctor from 'custom/custom-about-doctor/custom-about-doctor'
+import CustomTeam from 'custom/custom-about-team/custom-about-team'
 
 export default {
   computed: {
@@ -12,6 +13,7 @@ export default {
   },
   components: {
     CustomDoctor,
+    CustomTeam,
     HeroComponent
   }
 }
