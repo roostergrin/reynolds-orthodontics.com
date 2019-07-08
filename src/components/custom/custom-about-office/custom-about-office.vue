@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     setWidth () {
-      this.width = this.$refs.thum[0].offsetWidth
+      this.width = this.$refs.thumb[0].offsetWidth
     },
     slide (e) {
       if (e === 'prev') {

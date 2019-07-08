@@ -5,7 +5,7 @@
       transition-group(name='crossfade', tag='div')
         .custom-about-office__slide(v-for='slide, i in content.slides', :key='"slide-" + i' v-show='i === active')
           AppLazyImg.custom-about-office__image(:src='slide.image')
-    .custom-about-office__thumbs
+    .custom-about-office__thumbs(ref='track')
       //- .custom-about-office__thumbs--overlay
       .custom-about-office__thumb(v-for='thumb, j in content.slides', :key='j' ref='thumb' @click='moveToSlide(j)', :class="{ 'custom-about-office__thumb--active': active === j}")
         AppLazyImg.custom-about-office__thumb-image(:src='thumb.image' )      
