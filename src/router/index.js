@@ -34,19 +34,22 @@ const router = new VueRouter({
       component: TreatmentsPage,
       children: [
         {
-          path: '/treatments#kids-club',
+          path: '/treatments#treatment-tabs',
           label: 'kids club',
-          background: '/static/navigation-kid-bg.jpg'
+          background: '/static/navigation-kid-bg.jpg',
+          tab: 0
         },
         {
-          path: '/treatments#teen',
+          path: '/treatments#treatment-tabs',
           label: 'teen',
-          background: '/static/navigation-teen-bg.jpg'
+          background: '/static/navigation-teen-bg.jpg',
+          tab: 1
         },
         {
-          path: '/treatments#adult',
+          path: '/treatments#treatment-tabs',
           label: 'adult',
-          background: '/static/navigation-adult-bg.jpg'
+          background: '/static/navigation-adult-bg.jpg',
+          tab: 2
         },
         {
           path: '/treatments#treatment-options',

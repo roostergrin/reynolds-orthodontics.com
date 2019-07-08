@@ -7,7 +7,8 @@ import {
   // GET_BLOG,
   GET_PAGES,
   GET_INSTAGRAM,
-  SET_SCROLLED
+  SET_SCROLLED,
+  SET_TAB
 } from './mutation-types'
 
 const actions = {
@@ -81,6 +82,9 @@ const actions = {
   },
   SET_SCROLLED ({ commit }, data) {
     commit(SET_SCROLLED, data)
+  },
+  SET_TAB ({ commit }, data) {
+    commit(SET_TAB, data)
   }
 }
 

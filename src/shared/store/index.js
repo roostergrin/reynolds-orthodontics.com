@@ -12,7 +12,8 @@ const store = new Vuex.Store({
     loading: true,
     pages: {},
     scrolled: {},
-    insta: {}
+    insta: {},
+    tab: {}
   },
   mutations: mutations,
   actions: actions

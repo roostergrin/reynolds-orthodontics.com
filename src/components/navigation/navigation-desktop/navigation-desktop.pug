@@ -19,4 +19,4 @@
                 .navigation-desktop__overlay(v-if='sublink.background')
                 .navigation-desktop__bg(v-if='sublink.background', :style="{ backgroundImage: 'url(' + sublink.background + ')' }")
                 AppIcon.navigation-desktop__sublink-icon(:name='sublink.icon' v-if='sublink.icon')  
-                router-link.navigation-desktop__label(v-html='sublink.label', :to='sublink.path', :class="{ 'navigation-desktop__label--small': sublink.icon }")
+                router-link.navigation-desktop__label(v-html='sublink.label', :to='sublink.path', :class="{ 'navigation-desktop__label--small': sublink.icon }" @click.native='handleSublink(sublink.tab)')

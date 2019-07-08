@@ -1,8 +1,8 @@
 <template lang="pug" src="./treatments.pug"></template>
 
 <script>
-const HeroComponent = () => import('components/hero/hero')
-const BlockTabs = () => import('components/block/block-tabs/block-tabs')
+import HeroComponent from 'components/hero/hero'
+import BlockTabs from 'components/block/block-tabs/block-tabs'
 
 export default {
   computed: {

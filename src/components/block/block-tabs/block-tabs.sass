@@ -67,9 +67,9 @@
         transform-origin: 50% 25%
 
     &:hover
-      transform: scale(1.05)
+      transform: scale(1.025)
       z-index: 1
-      box-shadow: 0 4px 8px -4px rgba($black, .45)
+      box-shadow: 0 6px 16px -8px rgba($black, .45)
 
       .block-tabs__content-overlay
         z-index: 1
@@ -105,3 +105,44 @@
       max-width: 65rem
       height: calc(100% - 2rem)
       max-height: 35rem
+
+    &-image
+      @extend .image
+      opacity: .25
+      z-index: -1
+
+    &-content
+      position: relative
+      height: 100%
+
+    &-close
+      position: absolute
+      top: 2rem
+      right: 2rem
+      width: 2rem
+      height: 2rem
+
+      span
+        display: block
+        position: absolute
+        top: 45%
+        background: $c1
+        width: 2rem
+        height: 4px
+
+        &:first-child
+          transform: rotate(45deg)
+
+        &:last-child
+          transform: rotate(-45deg)
+
+    &-text-container
+      position: absolute
+      top: 50%
+      left: 60%
+      transform: translate(-50%, -50%)
+      width: 45%
+
+    &-title
+      @extend h1
+      margin-bottom: 1rem

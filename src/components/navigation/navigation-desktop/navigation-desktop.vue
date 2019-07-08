@@ -17,6 +17,12 @@ export default {
     fixed: {
       Type: Boolean
     }
+  },
+  methods: {
+    handleSublink (i) {
+      this.$store.dispatch('SET_TAB', i)
+      this.dropdownActive = false
+    }
   }
 }
 </script>

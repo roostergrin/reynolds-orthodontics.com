@@ -1,4 +1,4 @@
-.block-tabs
+.block-tabs(:id="$route.path === '/treatments' ? 'treatment-tabs' : ''")
   AppLazyBg.block-tabs__background(:src='content.background' v-if='content.background')
   .block-tabs__background-overlay
   .block-tabs__container
@@ -9,24 +9,26 @@
       :key='"tab - " + i')
       
       router-link.block-tabs__content(:to='tab.href' v-if='tab.href')
-        AppLazyBg.block-tabs__content-background(:src='tab.image')
+        AppLazyImg.block-tabs__content-background(:src='tab.image')
         .block-tabs__content-overlay
         h3.block-tabs__content-title(v-html='tab.title')
         
       .block-tabs__content(v-if='!tab.href' @click='openModal(i)')
-        AppLazyBg.block-tabs__content-background(:src='tab.image')
+        AppLazyImg.block-tabs__content-background(:src='tab.image')
         .block-tabs__content-overlay
         h3.block-tabs__content-title(v-html='tab.title')
 
   .block-tabs__modal(
     v-for='(modal, i) in content.tabs'
     :key='"modal - " + i'
-    :class="{ 'block-tabs__modal--showing': i === currModal }"
+    :class="{ 'block-tabs__modal--showing': i === currModal || i === $store.state.tab }"
     v-if='!modal.href')
     .block-tabs__modal-overlay(@click='closeModal')
     .block-tabs__modal-container
       .block-tabs__modal-content
-        .block-tabs__modal-close(@click='closeModal') close
+        .block-tabs__modal-close(@click='closeModal')
+          span
+          span  
         .block-tabs__modal-image-container
           AppLazyBg.block-tabs__modal-image(:src='modal.modal_image')
         .block-tabs__modal-text-container

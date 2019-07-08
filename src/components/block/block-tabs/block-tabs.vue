@@ -19,6 +19,7 @@ export default {
     },
     closeModal () {
       this.currModal = null
+      this.$store.dispatch('SET_TAB', null)
       document.body.classList.remove('body-stop')
     }
   }
