@@ -1,9 +1,9 @@
 <template lang="pug" src="./financials.pug"></template>
 
 <script>
-const BlockTitleText = () => import('components/block/block-title-text/block-title-text')
-const CustomFinancialsFaq = () => import('components/custom/custom-financials-faq/custom-financials-faq')
-const HeroComponent = () => import('components/hero/hero')
+import BlockTitleText from 'components/block/block-title-text/block-title-text'
+import CustomFinancialsFaq from 'components/custom/custom-financials-faq/custom-financials-faq'
+import HeroComponent from 'components/hero/hero'
 
 export default {
   computed: {
