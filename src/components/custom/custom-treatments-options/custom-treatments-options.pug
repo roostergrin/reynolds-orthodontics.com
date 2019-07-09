@@ -1,0 +1,13 @@
+#treatment-options.custom-treatments-options
+  .custom-treatments-options__bg
+  .custom-treatments-options__title(v-html='content.title')
+  .custom-treatments-options__container
+    .custom-treatments-options__tabs
+      .custom-treatments-options__tab(v-for='tab, i in content.tabs', :key='i' v-html='tab.label' @click='goToTab(i)', :class="{ 'custom-treatments-options__tab--active': i === show}")
+    .custom-treatments-options__content
+      .custom-treatments-options__col.custom-treatments-options__col--left
+        transition-group(name='crossfade' tag='div')
+          .custom-treatments-options__text(v-for='text, j in content.text', :key='"text-" + j' v-show='j === show' v-html='text.content')
+      .custom-treatments-options__col.custom-treatments-options__col--right
+        transition-group(name='crossfade' tag='div')      
+          AppLazyImg.custom-treatments-options__image(v-for='image, k in content.images', :key='"image-" + k' v-show='k === show', :src='image.image')

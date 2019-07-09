@@ -1,0 +1,99 @@
+.custom-treatments-options
+  position: relative
+  padding: rem-calc(60) 0
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    background: $gr2
+    width: 100%
+    height: 100%
+
+  &__title
+    @extend h1
+    text-align: center
+
+  &__container
+    @extend .container
+    margin-top: 2rem
+    height: 100%
+
+  &__tabs
+    @extend .col-2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0
+
+  &__tab
+    @extend h3
+    position: relative
+    transition: transform .2s ease
+    margin-bottom: 2rem
+    cursor: pointer
+    overflow: hidden
+    color: $white
+    font-weight: 400
+
+    &:after
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translateY(-50%) translateX(2rem)
+      transition: transform .2s cubic-bezier(0, 0, 0.2, 1), opacity .25s ease-in
+      // opacity: 0
+      border: .75rem solid transparent
+      border-right-color: $c1
+      content: ''
+      transform-origin: 50% 25%
+
+    &--active
+      transform: translateX(-.5rem)
+      -webkit-text-stroke: 1px
+
+      &:after
+        transform: translateY(-50%) translateX(-.5rem)
+        opacity: 1
+
+    &:hover
+      -webkit-text-stroke: 1px
+
+  &__content
+    @extend .col-10
+    display: flex
+    align-items: center
+    height: 320px
+    color: $c1
+
+  &__col
+    position: relative
+    height: 100%
+
+    &--left
+      width: 60%
+
+    &--right
+      width: 40%
+
+  &__text
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    // background: pink
+    padding:  0 1rem
+
+  &__image
+    @extend .image
+    background-size: contain
+    // background-color: grey
+
+    // max-width: 420px
+    // flex-shrink: 0
+    // width: 100%
+    // height: 100%
+    // width: 100%
+    // height: 100%
