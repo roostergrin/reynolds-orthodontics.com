@@ -1,4 +1,6 @@
 .block-tabs
+  @include tablet
+    padding: 3rem 0
   position: relative
   padding: 6rem 0
   overflow: hidden
@@ -22,6 +24,10 @@
 
   &__col
     @extend .col-4
+    @include tablet
+      width: 33%
+    @include phone-lg
+      width: 100%
     padding: 0
 
   &__title
@@ -32,6 +38,10 @@
     color: $c2
 
   &__content
+    @include tablet-lg
+      min-height: 20rem
+    @include tablet
+      min-height: 33vw
     display: flex
     position: relative
     align-items: center
@@ -46,6 +56,8 @@
       background: $ol1--alt
 
     &-title
+      @include tablet
+        font-size: 18px
       position: relative
       left: 1rem
       transition: color .3s ease, transform .3s cubic-bezier(0, 0, 0.2, 1)
@@ -101,9 +113,9 @@
     &-container
       @extend .image
       background: $white
-      width: calc(100% - 2rem)
+      width: calc(100% - 4rem)
       max-width: 65rem
-      height: calc(100% - 2rem)
+      height: calc(100% - 4rem)
       max-height: 35rem
 
     &-image

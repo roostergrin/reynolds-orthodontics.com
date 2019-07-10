@@ -1,4 +1,4 @@
-.custom-home-welcome(v-waypoint='{active: true, callback: $_onScroll, options: intersectionOptions}', :class="{ 'custom-home-welcome--active': active}")
+.custom-home-welcome(v-waypoint='{active: true, callback: $_onScroll, options: intersectionOptions}', :class="{ 'custom-home-welcome--active': active || windowHeight >= 800 }")
   AppLazyBg.custom-home-welcome__image(:src='content.image')
   .custom-home-welcome__container
     .custom-home-welcome__content

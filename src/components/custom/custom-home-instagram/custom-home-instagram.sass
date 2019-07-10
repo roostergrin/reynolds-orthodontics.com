@@ -3,6 +3,8 @@
 
   &__container
     @extend .container
+    @include tablet
+      justify-content: center
 
   &__title
     @extend h1
@@ -12,6 +14,9 @@
 
   &__thumb
     @extend .col-3
+    @include tablet
+      margin: 1rem
+      max-width: 40%
 
   &__image
     width: 100%

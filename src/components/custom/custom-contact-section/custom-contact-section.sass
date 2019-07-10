@@ -15,8 +15,13 @@
     @extend .container
 
   &__col
+    @include tablet-lg
+      width: calc((7/12) * 100%)
     &--left
       @extend .col-6
+      @include tablet-lg
+        border-top-right-radius: 15px
+        padding: 3rem 2rem
       border-top-left-radius: 15px
       border-bottom-left-radius: 15px
       background: $white
@@ -24,6 +29,10 @@
 
     &--right
       @extend .col-2
+      @include tablet-lg
+        border-top-right-radius: 0
+        border-bottom-left-radius: 15px
+        padding: 2rem
       border-top-right-radius: 15px
       border-bottom-right-radius: 15px
       background: $c2
@@ -33,15 +42,19 @@
     margin-bottom: rem-calc(10)
 
   &__instructions
-    margin-bottom: rem-calc(12) 
+    margin-bottom: rem-calc(12)
 
   &__address
+    @include tablet-lg
+      font-size: 18px
     display: block
     margin: rem-calc(10) 0
     color: $white
     font-size: 15px
 
   &__phone
+    @include tablet-lg
+      font-size: 18px
     color: $white
     font-size: 16px
 

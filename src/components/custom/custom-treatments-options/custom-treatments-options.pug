@@ -3,7 +3,7 @@
   .custom-treatments-options__title(v-html='content.title')
   .custom-treatments-options__container
     .custom-treatments-options__tabs
-      .custom-treatments-options__tab(v-for='tab, i in content.tabs', :key='i' v-html='tab.label' @click='goToTab(i)', :class="{ 'custom-treatments-options__tab--active': i === show}")
+      h3.custom-treatments-options__tab(v-for='tab, i in content.tabs', :key='i' v-html='tab.label' @click='goToTab(i)', :class="{ 'custom-treatments-options__tab--active': i === show}")
     .custom-treatments-options__content
       .custom-treatments-options__col.custom-treatments-options__col--left
         transition-group(name='crossfade' tag='div')
