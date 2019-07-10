@@ -4,7 +4,13 @@
 export default {
   data () {
     return {
-      show: 0
+      show: 0,
+      active: false,
+      options: {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.5]
+      }
     }
   },
   props: {
@@ -15,6 +21,11 @@ export default {
   methods: {
     handleClick (i) {
       this.show = i
+    },
+    onScroll ({going}) {
+      if (going === 'in') {
+        this.active = true
+      }
     }
   }
 }

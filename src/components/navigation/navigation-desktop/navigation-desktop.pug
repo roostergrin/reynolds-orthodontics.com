@@ -13,10 +13,10 @@
         li.navigation-desktop__nav-item(v-for='link, i in links', :key='i', :class="{ 'navigation-desktop__nav-item--active': $route.path === link.path}")
           router-link.navigation-desktop__link(:to='link.path' v-html='link.name')
             
-          .navigation-desktop__dropdown
-            .navigation-desktop__dropdown-container
-              .navigation-desktop__sublink(v-for='sublink, j in link.children', :key='j', :class="{ 'navigation-desktop__sublink--icon': sublink.icon }")
-                .navigation-desktop__overlay(v-if='sublink.background')
-                .navigation-desktop__bg(v-if='sublink.background', :style="{ backgroundImage: 'url(' + sublink.background + ')' }")
-                AppIcon.navigation-desktop__sublink-icon(:name='sublink.icon' v-if='sublink.icon')  
-                router-link.navigation-desktop__label(v-html='sublink.label', :to='sublink.path', :class="{ 'navigation-desktop__label--small': sublink.icon }" @click.native='handleSublink(sublink.tab)')
+          //- .navigation-desktop__dropdown
+          //-   .navigation-desktop__dropdown-container
+          //-     .navigation-desktop__sublink(v-for='sublink, j in link.children', :key='j', :class="{ 'navigation-desktop__sublink--icon': sublink.icon }")
+          //-       .navigation-desktop__overlay(v-if='sublink.background')
+          //-       .navigation-desktop__bg(v-if='sublink.background', :style="{ backgroundImage: 'url(' + sublink.background + ')' }")
+          //-       AppIcon.navigation-desktop__sublink-icon(:name='sublink.icon' v-if='sublink.icon')  
+          //-       router-link.navigation-desktop__label(v-html='sublink.label', :to='sublink.path', :class="{ 'navigation-desktop__label--small': sublink.icon }" @click.native='handleSublink(sublink.tab)')

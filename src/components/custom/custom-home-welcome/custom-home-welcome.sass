@@ -22,9 +22,21 @@
 
   &__title
     @extend h3
+    transform: translateY(1rem)
+    transition: transform .7s cubic-bezier(.52, .01, .16, 1), opacity .7s ease-in
+    opacity: 0
+
+    .custom-home-welcome--active &
+      transform: none
+      opacity: 1
 
   &__text
+    transition: opacity .7s ease-in .25s
+    opacity: 0
     margin: 2rem 0 3rem
+
+    .custom-home-welcome--active &
+      opacity: 1
 
   &__title, &__text
     @include tablet
@@ -35,7 +47,8 @@
       display: block
       margin: 0 auto
     display: inline-block
-    transition: transform .2s ease, background .2s ease, box-shadow .2s ease
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease, opacity .7s ease-in .5s
+    opacity: 0
     border-radius: 20px
     background: $c2
     padding: rem-calc(8)
@@ -49,3 +62,6 @@
       transform: translateY(-2px)
       box-shadow: $bs1
       background: $c2--hover
+
+    .custom-home-welcome--active &
+      opacity: 1  

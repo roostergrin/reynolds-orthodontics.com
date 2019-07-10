@@ -1,7 +1,6 @@
 <template lang="pug" src="./custom-contact-section.pug"></template>
 
 <script>
-// import init from './gMapsInit.js'
 import mapStyles from './map.json'
 import Icon from '@/assets/icons/marker-map.svg'
 
@@ -28,7 +27,6 @@ export default {
   methods: {
     createMap (coords) {
       /* eslint-disable */
-      console.log(coords)
       this.$map = new google.maps.Map(this.$refs.mapContainer, {
         center: {
           lat: parseFloat(coords.lat),

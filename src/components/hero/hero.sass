@@ -47,8 +47,13 @@
 
   &__title
     @extend .hero-text
+    transform: translateY(1.5rem)
+    animation: fade-in-up .7s cubic-bezier(.39, .575, .28, .995) .2s forwards
+    opacity: 0
 
   &__logo
+    animation: fade-in .7s ease .2s forwards
+    opacity: 0
     margin: auto
     width: 120px
     height: 120px

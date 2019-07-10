@@ -1,9 +1,9 @@
-.custom-about-doctor#doctor
+.custom-about-doctor#doctor(v-waypoint='{ active: true, callback: onScroll, options: options }', :class="{ 'custom-about-doctor--active': active }")
   .custom-about-doctor__container
     .custom-about-doctor__row
       .custom-about-doctor__title(v-html='content.title')
     .custom-about-doctor__row
-      AppLazyImg.custom-about-doctor__image(:src='content.image')
+      img.custom-about-doctor__image(:src='content.image')
       .custom-about-doctor__content(v-html='content.content')
     .custom-about-doctor__row
       .custom-about-doctor__tabs
