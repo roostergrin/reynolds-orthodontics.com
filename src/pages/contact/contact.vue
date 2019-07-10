@@ -1,6 +1,8 @@
 <template lang="pug" src="./contact.pug"></template>
 
 <script>
+import ContactSection from 'custom/custom-contact-section/custom-contact-section'
+import HeroComponent from 'components/hero/hero'
 
 export default {
   computed: {
@@ -9,6 +11,8 @@ export default {
     }
   },
   components: {
+    ContactSection,
+    HeroComponent
   }
 }
 </script>

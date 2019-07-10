@@ -3,29 +3,56 @@
 <script>
 import api from 'api'
 import axios from 'axios'
+
 export default {
-  data: () => {
+  data () {
     return {
-      fullname: '',
-      phone: '',
+      firstName: '',
+      lastName: '',
       email: '',
+      phone: '',
+      age: '',
       message: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
-      formSuccess: false
+      active: ''
     }
   },
   methods: {
     validate () {
       this.$validator.validateAll()
+        .then(res => {
+          if (res) {
+            this.onSubmit()
+          }
+        })
+        .catch(e => { console.log(e) })
+    },
+    onSubmit () {
+      this.formSubmitted = true
       axios.post(this.postUrl, {
-        fullname: this.fullname,
-        phone: this.phone,
+        name: this.firstName + ' ' + this.lastName,
         email: this.email,
+        phone: this.phone,
+        age: this.age,
         message: this.message
       })
-        .then(res => { console.log(res) })
+        .then(res => {
+          this.active = ''
+          this.clearForm()
+        })
         .catch(e => { console.log(e) })
+    },
+    clearForm () {
+      this.firstName = ''
+      this.lastName = ''
+      this.email = ''
+      this.phone = ''
+      this.age = ''
+      this.message = ''
+    },
+    focused (name) {
+      this.active = name
     }
   }
 }

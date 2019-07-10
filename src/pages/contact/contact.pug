@@ -1,2 +1,3 @@
 .pages-contact(v-if='props') 
-  h1 {{ props.title }}
+  HeroComponent(:props='props.hero')
+  ContactSection(:content='props.contact')

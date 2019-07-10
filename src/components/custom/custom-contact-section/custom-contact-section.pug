@@ -1,0 +1,12 @@
+.custom-contact-section(v-if='props')
+  .custom-contact-section__map(ref='mapContainer')
+  .custom-contact-section__container
+    .custom-contact-section__col.custom-contact-section__col--left
+      h1.custom-contact-section__title(v-html='content.title')
+      .custom-contact-section__instructions(v-html='content.instructions')
+      .custom-contact-section__form
+        FormContact
+    .custom-contact-section__col.custom-contact-section__col--right
+      AppIcon.custom-contact-section__icon(name='marker')
+      a.custom-contact-section__address(:href='props.location.address_link' v-html='props.location.address' target='_blank' rel='noopener noreferrer')
+      a.custom-contact-section__phone(:href='props.phone.phone_link' v-html='props.phone.phone_number')

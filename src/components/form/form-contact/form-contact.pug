@@ -1,27 +1,39 @@
 .form-contact
-  .form-contact__thank-you(v-if='formSuccess')
-  form.form-contact__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
+  form.form-contact__form(@submit.prevent='validate' method='post')
     
-    .form-contact__group
-      input.form-contact__input(name='name', v-model='fullname', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('name') }", type='text', placeholder='First and Last Name')
-      .form-contact__message
-          span(v-show="errors.has('name')") Your name is required.
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item
+        span.form-contact__label(:class="{ 'form-contact__label--active': firstName !== '' || active === 'firstName' }" @click='focused("firstName")') First Name #[span.danger *]
+        input.form-contact__input(name='firstName', v-model='firstName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('firstName') && !formSuccess }" type='text' @focus='focused("firstName")')
+        .form-contact__message
+            span(v-show="errors.has('firstName') && !formSuccess") Please fill in your first name.
+          
+      .form-contact__item
+        span.form-contact__label(:class="{ 'form-contact__label--active': lastName !== '' || active === 'lastName' }" @click='focused("lastName")') Last Name #[span.danger *]
+        input.form-contact__input(name='lastName', v-model='lastName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('lastName') && !formSuccess }" type='text' @click='focused("lastName")')
+        .form-contact__message
+            span(v-show="errors.has('lastName') && !formSuccess") Please fill in your last name.      
     
-    .form-contact__group
-      input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }", placeholder='Email')
-      .form-contact__message
-        span(v-show="errors.has('email')") Please Input a Valid Email
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item
+        span.form-contact__label(:class="{ 'form-contact__label--active': email !== '' || active === 'email' }" @click='focused("email")') Email Address #[span.danger *]
+        input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') && !formSuccess }" @click='focused("email")')
+        .form-contact__message
+          span(v-show="errors.has('email') && !formSuccess") Please enter a valid email.
     
-    .form-contact__group
-      input.form-contact__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') }", placeholder='Phone Number')
-      .form-contact__message
-        span(v-show="errors.has('phone')") Please Input a Valid Phone Number
+      .form-contact__item.form-contact__item--not-required
+        span.form-contact__label(:class="{ 'form-contact__label--active': phone !== '' || active === 'phone' }" @click='focused("phone")') Phone Number
+        input.form-contact__input(name='phone', v-model='phone' v-validate="'required|numeric'", :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') && !formSuccess }" @focus='focused("phone")')
     
-    .form-contact__group
-      textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' placeholder='Message')
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item.form-contact__item--not-required
+        span.form-contact__label(:class="{ 'form-contact__label--active': age !== '' || active === 'age' }" @click='focused("age")') Patient's Age
+        input.form-contact__input.form-contact__input(name='age', v-model='age'  @focus='focused("age")')
     
-    .form-contact__button-group
-      button.form-contact__submit-button(@click='validate', type='submit', :disabled='formSubmitted')
+    .form-contact__group.form-contact__group--textarea
+      span.form-contact__label(:class="{ 'form-contact__label--active': message !== '' || active === 'message' }" @click='focused("message")') Message
+      textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message'  @focus='focused("message")' rows='2')
+    
+    .form-contact__group--button
+      button.form-contact__submit-button(@click='validate' type='submit', :disabled='formSubmitted')
         span Send
-      .form-contact__spinner(v-if='formSubmitted')
-        span Sending ...  

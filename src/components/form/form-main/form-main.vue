@@ -38,7 +38,6 @@ export default {
         .then(res => {
           this.active = ''
           this.clearForm()
-          this.$router.push('/thank-you')
         })
         .catch(e => { console.log(e) })
     },
