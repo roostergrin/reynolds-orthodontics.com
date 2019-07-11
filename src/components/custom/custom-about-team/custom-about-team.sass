@@ -1,4 +1,6 @@
 .custom-about-team
+  @include phone-lg
+    padding: 2rem 0
   background: $gr1
   padding: rem-calc(70) 0
 
@@ -27,6 +29,9 @@
     .custom-about-team__container--third &
       @include tablet
         width: 50%
+      @include phone-lg
+        padding: 0
+        width: 100%
       width: 33.33%
 
     .custom-about-team__container--quarter &
@@ -40,6 +45,9 @@
     height: 100%
 
   &__name-container
+    @include phone-lg
+      left: 0
+      width: 100%
     position: absolute
     bottom: 0
     left: 12px

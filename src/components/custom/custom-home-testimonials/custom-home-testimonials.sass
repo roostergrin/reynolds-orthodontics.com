@@ -1,4 +1,6 @@
 .custom-home-testimonials
+  @include phone-lg
+    padding: 0
   padding: rem-calc(65) 0
 
   &__container
@@ -7,6 +9,9 @@
   &__content-box
     @extend .col-10
     @extend .col-1--offset
+    @include phone-lg
+      box-shadow: none
+      background: transparent
     position: relative
     border-radius: 41px
     box-shadow: $bs2
@@ -16,11 +21,17 @@
 
   &__bg
     @extend .image--bg
+    @include phone-lg
+      display: none
 
   &__col
     @include tablet
       margin-left: 40%
       width: 60%
+    @include phone-lg
+      margin-left: 0
+      padding: 0
+      width: 100%
     display: flex
     align-items: center
     margin-left: 50%
@@ -73,6 +84,8 @@
     justify-content: center
 
   &__dot
+    @include phone-lg
+      background: $c6
     border-radius: 50%
     background: $white
     cursor: pointer

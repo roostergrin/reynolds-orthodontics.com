@@ -25,6 +25,8 @@
     @include tablet
       flex-direction: row
       margin-bottom: 2rem
+    @include phone-lg
+      flex-direction: column
     display: flex
     flex-direction: column
     justify-content: center
@@ -42,6 +44,10 @@
       min-width: 150px
       color: $c1
       font-size: 16px
+    @include phone-lg
+      display: inline-block
+      margin-bottom: 1rem
+      max-width: 180px
     position: relative
     transition: transform .2s ease
     margin-bottom: 2rem
@@ -79,6 +85,9 @@
 
   &__content
     @extend .col-10
+    @include phone-lg
+      flex-wrap: wrap
+      height: 420px
     display: flex
     align-items: center
     height: 320px
@@ -89,12 +98,19 @@
     height: 100%
 
     &--left
+      @include phone-lg
+        width: 100%
       width: 60%
 
     &--right
+      @include phone-lg
+        width: 100%
       width: 40%
 
   &__text
+    @include phone-lg
+      top: 0
+      transform: translate(-50%, 0)
     position: absolute
     top: 50%
     left: 50%
@@ -103,5 +119,7 @@
     width: 100%
 
   &__image
+    @include phone-lg
+      display: none
     @extend .image
     background-size: contain

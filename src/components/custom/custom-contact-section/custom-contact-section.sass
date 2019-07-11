@@ -1,9 +1,14 @@
 .custom-contact-section
+  @include phone-lg
+    padding: 0 0 2rem
   position: relative
   padding: rem-calc(60) 0
   height: 100%
 
   &__map
+    @include phone-lg
+      position: relative
+      height: 300px
     position: absolute
     top: 0
     left: 0
@@ -13,10 +18,15 @@
 
   &__container
     @extend .container
+    @include phone-lg
+      padding: 0
 
   &__col
     @include tablet-lg
       width: calc((7/12) * 100%)
+    @include phone-lg
+      width: 100%
+
     &--left
       @extend .col-6
       @include tablet-lg
@@ -33,6 +43,9 @@
         border-top-right-radius: 0
         border-bottom-left-radius: 15px
         padding: 2rem
+      @include phone-lg
+        order: -1
+        border-radius: 0
       border-top-right-radius: 15px
       border-bottom-right-radius: 15px
       background: $c2

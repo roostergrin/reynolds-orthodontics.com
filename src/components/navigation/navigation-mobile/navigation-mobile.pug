@@ -1,7 +1,7 @@
 .navigation-mobile(:class="{ 'navigation-mobile--scrolling': fixed }")
   .navigation-mobile__navbar
     router-link.navigation-mobile__home(to='/' @click.native='closeDrawer')
-      AppIcon.navigation-mobile__logo(name='logo-hero')
+      AppIcon.navigation-mobile__logo(name='logo-hero', :class="{ 'navigation-mobile__logo--drawer': drawerOpen }")
   
     .navigation-mobile__hamburger(@click='toggleDrawer', :class="{ 'navigation-mobile__hamburger--active': drawerOpen }")
       span

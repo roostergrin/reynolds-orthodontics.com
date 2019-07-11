@@ -1,5 +1,5 @@
 .navigation-mobile
-  position: fixed
+  position: absolute
   top: 34px
   left: 0
   transition: background .4s ease
@@ -7,6 +7,7 @@
   width: 100%
 
   &--scrolling
+    position: fixed
     top: 0
     background: $c3-alt
 
@@ -42,6 +43,11 @@
     width: 100%
     height: 100%
 
+    &--drawer
+      .hero-icon
+        transition: fill .2s ease
+
+    &--drawer,
     .navigation-mobile--scrolling &
       .hero-icon
         fill: $c1
@@ -58,18 +64,18 @@
 
     &--active
       span
-        background: $c1   
+        background: $c1
 
   &__drawer
     position: absolute
-    top: 0
+    top: -56px
     right: 0
     z-index: 2
     background: white
     padding: rem-calc(77) 0 0
     width: 100%
     // max-width: rem-calc(420)
-    height: 100vh
+    height: calc(100vh + 56px)
 
   &__menu
     opacity: 0

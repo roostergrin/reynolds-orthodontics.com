@@ -1,4 +1,6 @@
 .custom-about-doctor
+  @include phone-lg
+    padding: 2rem 0
   padding: rem-calc(70) 0
 
   &__container
@@ -7,15 +9,21 @@
   &__row
     @extend .col-10
     @extend .col-1--offset
+    @include phone-lg
+      flex-wrap: wrap
     display: flex
     position: relative
     padding: 0
 
   &__title
     @extend h1
+    @include phone-lg
+      margin: 0 auto 2rem
     margin-bottom: 2rem
 
   &__image
+    @include phone-lg
+      margin: 0 auto 2rem
     flex-shrink: 0
     transform: translateX(-2rem)
     transition: clip-path 1.3s cubic-bezier(.19, 1, .22, 1), opacity .8s ease-in, transform 1.3s cubic-bezier(.165, .84, .44, 1)
@@ -32,16 +40,22 @@
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
 
   &__content
+    @include phone-lg
+      margin-left: 0
     margin-left: 2rem
     width: 100%
 
   &__tabs
+    @include phone-lg
+      margin: 2rem 0
     display: flex
     justify-content: center
     margin: 4rem 0
     width: 100%
 
   &__tab
+    @include phone-lg
+      margin: auto rem-calc(10)
     transition: color .2s ease, background .2s ease
     margin: auto 2rem
     border: 2px solid $c8
@@ -58,6 +72,9 @@
       color: $white
 
   &__content-box
+    @include phone-lg
+      padding: 0
+      justify-content: center
     display: flex
     position: absolute
     top: 0
@@ -72,6 +89,9 @@
     height: 255px
 
   &__item
+    @include phone-lg
+      margin-right: rem-calc(32)
+    //   flex-direction: column
     display: flex
     align-items: center
     // width: 20%
@@ -81,6 +101,8 @@
       width: 100%
 
   &__logo
+    @include phone-lg
+      height: 50px
     height: 64px
 
     .custom-about-doctor__item--text &
