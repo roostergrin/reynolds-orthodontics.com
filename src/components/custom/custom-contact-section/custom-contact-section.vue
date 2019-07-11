@@ -7,6 +7,11 @@ import Icon from '@/assets/icons/marker-map.svg'
 import FormContact from 'components/form/form-contact/form-contact'
 
 export default {
+  data () {
+    return {
+      windowWidth: window.innerWidth
+    }
+  },
   props: {
     content: {
       type: Object
@@ -39,6 +44,15 @@ export default {
         streetViewControl: false,
         styles: mapStyles
       })
+
+      if (this.windowWidth <= 768) {
+        this.$map.setCenter({lat: 34.956645, lng: -80.8780306})
+      }
+
+      if (this.windowWidth < 460) {
+        this.$map.setCenter({lat: 34.956645, lng: -80.8580306})
+      }
+
     },
     addMarker (coords) {
       new google.maps.Marker({
