@@ -14,7 +14,7 @@
   &__bg
     @extend .image--bg
     @include tablet
-      background-position: 18% 
+      background-position: 18%
     z-index: -1
 
     .pages-financials &,
@@ -32,6 +32,14 @@
     text-align: center
     color: $white
     font-size: 14px
+
+  &__banner-content
+    &--desktop
+      @include tablet
+        display: none
+    &--mobile
+      @media screen and (min-width: $screen-tablet)
+        display: none
 
   &__phone-number
     margin-left: 4px

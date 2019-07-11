@@ -9,13 +9,13 @@ export default {
   },
   props: {
     props: {
-      Type: Object
+      type: Object
     },
     links: {
-      Type: Array
+      type: Array
     },
     fixed: {
-      Type: Boolean
+      type: Boolean
     }
   },
   methods: {

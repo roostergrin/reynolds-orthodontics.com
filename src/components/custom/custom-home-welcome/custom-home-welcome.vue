@@ -19,9 +19,6 @@ export default {
       type: Object
     }
   },
-  async mounted () {
-    console.log(this.windowHeight)
-  },
   methods: {
     $_onScroll ({going, direction}) {
       if (going === 'in' && direction === 'top') {

@@ -2,6 +2,7 @@
 
 <script>
 import Desktop from 'components/navigation/navigation-desktop/navigation-desktop'
+import Mobile from 'components/navigation/navigation-mobile/navigation-mobile'
 
 export default {
   data () {
@@ -28,7 +29,8 @@ export default {
     })
   },
   components: {
-    Desktop
+    Desktop,
+    Mobile
   }
 }
 </script>

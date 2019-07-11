@@ -1,6 +1,7 @@
 .hero
   .hero__banner
-    .hero__banner--content We know you are busy, send us a text: #[a.hero__phone-number(href='sms:+18036503061') 803.650.3061]
+    .hero__banner-content.hero__banner-content--desktop We know you are busy, send us a text: #[a.hero__phone-number(href='sms:+18036503061') 803.650.3061]
+    .hero__banner-content.hero__banner-content--mobile Text Us: #[a.hero__phone-number(href='sms:+18036503061') 803.650.3061]
   .hero__overlay
   .hero__bg(:style="{ backgroundImage: 'url(' + props.image + ')' }")
   //- video.hero__video(:src='props.video' muted preload autoplay loop)  
