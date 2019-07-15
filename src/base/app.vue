@@ -1,6 +1,7 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
+import BlockExam from 'block/block-exam/block-exam'
 import TheFooter from 'components/footer/footer'
 import TheNavigation from 'components/navigation/navigation/'
 
@@ -13,6 +14,7 @@ export default {
     this.$store.dispatch('SET_SCROLLED', false)
   },
   components: {
+    BlockExam,
     TheFooter,
     TheNavigation
   }

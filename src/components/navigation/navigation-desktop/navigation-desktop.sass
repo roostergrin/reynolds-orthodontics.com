@@ -33,15 +33,22 @@
       z-index: 2
 
   &__phone
+    transition: color .2s ease
     opacity: 0
     margin-right: 1rem
-    width: 20px
-    height: 20px
+    height: 100%
+    line-height: 20px
+    color: $c2
+    font-size: 16px
+    font-weight: 600
     pointer-events: none
 
     .navigation-desktop--fixed &
       opacity: 1
       pointer-events: auto
+
+    &:hover
+      color: $c5
 
   &__phone-icon
     fill: $c2
@@ -51,7 +58,7 @@
     width: 32px
     pointer-events: all
 
-    &:first-child
+    &:not(:last-child)
       margin-right: rem-calc(8)
 
     .navigation-desktop--fixed &

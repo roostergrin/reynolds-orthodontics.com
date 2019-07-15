@@ -1,7 +1,7 @@
 .navigation-desktop(:class="{ 'navigation-desktop--fixed': fixed}" v-if='props')
   .navigation-desktop__topbar
     a.navigation-desktop__phone(:href='props.phone.phone_link')
-      AppIcon.navigation-desktop__phone-icon(name='phone')
+      .navigation-desktop__phone-number(v-html='props.phone.phone_number')
     .navigation-desktop__social-links
       a.navigation-desktop__social-link(v-for='social, i in props.social_media', :href='social.link' target='_blank' rel='noreferrer noopener')
         AppIcon.navigation-desktop__social-icon(:name='social.icon')

@@ -1,0 +1,21 @@
+.block-exam
+  @include ipad-pro
+    top: 25%
+  @include tablet
+    top: 25%
+  @include phone-lg
+    display: none
+  position: fixed
+  top: 40%
+  right: -82px
+  transform: rotate(90deg)
+  z-index: 9999
+
+  &__btn
+    transition: background .2s ease
+    background: $c2
+    padding: rem-calc(8) rem-calc(21)
+    color: $white
+
+    &:hover
+      background: $c2--hover

@@ -11,6 +11,9 @@
     @extend .overlay
     background: $ol1
 
+    &--light
+      background: rgba($c1, .08)
+
   &__bg
     @extend .image--bg
     @include tablet
@@ -75,14 +78,26 @@
     width: 120px
     height: 120px
 
-  // &__video
-  //   position: absolute
-  //   top: 0
-  //   left: 0
-  //   z-index: -1
-  //   width: 100%
-  //   height: 100%
-  //   overflow: hidden
-  //
-  //   @supports(object-fit: cover)
-  //     object-fit: cover
+    &--home
+      @include phone-lg
+        display: block
+        width: 300px
+      width: 420px
+      height: 100%
+
+      .pages-home &
+        .b9e46780-602d-44c1-a449-b59a5b303f75,
+        .a849a40f-3d08-4c82-b54b-e9543969e333
+          fill: $white
+
+        // &__video
+        //   position: absolute
+        //   top: 0
+        //   left: 0
+        //   z-index: -1
+        //   width: 100%
+        //   height: 100%
+        //   overflow: hidden
+        //
+        //   @supports(object-fit: cover)
+        //     object-fit: cover
