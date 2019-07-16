@@ -2,6 +2,7 @@
 
 <script>
 import BlockTitleText from 'components/block/block-title-text/block-title-text'
+import CustomFinancialsFaq from 'components/custom/custom-financials-faq/custom-financials-faq'
 import CustomNewForms from 'components/custom/custom-new-forms/custom-new-forms'
 import HeroComponent from 'components/hero/hero'
 
@@ -13,6 +14,7 @@ export default {
   },
   components: {
     BlockTitleText,
+    CustomFinancialsFaq,
     CustomNewForms,
     HeroComponent
   }

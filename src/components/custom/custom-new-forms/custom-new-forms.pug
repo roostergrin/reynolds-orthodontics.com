@@ -1,4 +1,5 @@
-.custom-new-forms
+.custom-new-forms(:style="{ backgroundImage: 'url(' + content.bg_image + ')'}")
+  .custom-new-forms__overlay
   .custom-new-forms__container
     .custom-new-forms__col
       h3.custom-new-forms__title(v-html='content.title')

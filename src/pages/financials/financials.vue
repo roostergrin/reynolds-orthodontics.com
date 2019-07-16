@@ -2,7 +2,6 @@
 
 <script>
 import BlockTitleText from 'components/block/block-title-text/block-title-text'
-import CustomFinancialsFaq from 'components/custom/custom-financials-faq/custom-financials-faq'
 import HeroComponent from 'components/hero/hero'
 
 export default {
@@ -13,7 +12,6 @@ export default {
   },
   components: {
     BlockTitleText,
-    CustomFinancialsFaq,
     HeroComponent
   }
 }

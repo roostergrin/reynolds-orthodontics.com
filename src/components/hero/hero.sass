@@ -12,7 +12,7 @@
     background: $ol1
 
     &--light
-      background: rgba($c1, .08)
+      background: rgba($c1, .18)
 
   &__bg
     @extend .image--bg
@@ -62,6 +62,10 @@
     z-index: 2
     text-align: center
     color: $white
+
+    .pages-home &
+      @include tablet
+        top: 70%
 
   &__title
     @extend .hero-text

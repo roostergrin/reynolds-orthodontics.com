@@ -21,6 +21,7 @@
     position: fixed
     top: rem-calc(56)
     left: 50%
+    align-items: center
     justify-content: flex-end
     transform: translateX(-50%)
     padding: 0 2rem
@@ -29,7 +30,7 @@
     pointer-events: none
 
     .navigation-desktop--fixed &
-      top: 1.5rem
+      top: 1.35rem
       z-index: 2
 
   &__phone
@@ -53,6 +54,11 @@
   &__phone-icon
     fill: $c2
 
+  &__social-links
+    @include laptop
+      display: none
+    height: 20px
+
   &__social-link
     display: inline-block
     width: 32px
@@ -63,6 +69,7 @@
 
     .navigation-desktop--fixed &
       width: 20px
+      height: 20px
 
   &__social-icon
     fill: $white
@@ -105,10 +112,10 @@
   &__logo
     height: 100%
 
-  &__link
-    @extend .nav-link
+  // &__link
 
   &__nav-item
+    @extend .nav-link
     display: inline-block
     position: relative
     padding: 1.5rem 1rem
@@ -116,11 +123,16 @@
     height: 100%
     text-align: center
 
+    &:hover
+      color: $c2
+
     &--active
       background: $c2
+      color: $white
 
-      .navigation-desktop__link
+      &:hover
         color: $white
+
 
     // &:nth-child(3)
     //   &:after

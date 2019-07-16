@@ -1,7 +1,7 @@
 <template lang="pug" src="./custom-home-appointment.pug"></template>
 
 <script>
-import FormMain from 'components/form/form-main/form-main'
+import FormContact from 'components/form/form-contact/form-contact'
 export default {
   props: {
     content: {
@@ -9,7 +9,7 @@ export default {
     }
   },
   components: {
-    FormMain
+    FormContact
   }
 }
 </script>

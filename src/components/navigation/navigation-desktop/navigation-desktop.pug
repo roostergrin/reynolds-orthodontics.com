@@ -9,9 +9,9 @@
     .navigation-desktop__navbar
       router-link.navigation-desktop__home(to='/')
         AppIcon.navigation-desktop__logo(name='logo-main')
-      ul.navigation-desktop__menu
-        li.navigation-desktop__nav-item(v-for='link, i in links', :key='i', :class="{ 'navigation-desktop__nav-item--active': $route.path === link.path}")
-          router-link.navigation-desktop__link(:to='link.path' v-html='link.name')
+      .navigation-desktop__menu
+        router-link.navigation-desktop__nav-item(v-for='link, i in links', :key='i', :to='link.path' v-html='link.name', :class="{ 'navigation-desktop__nav-item--active': $route.path === link.path}")
+          //- router-link.navigation-desktop__link()
             
           //- .navigation-desktop__dropdown
           //-   .navigation-desktop__dropdown-container

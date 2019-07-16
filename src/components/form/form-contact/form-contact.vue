@@ -11,7 +11,7 @@ export default {
       lastName: '',
       email: '',
       phone: '',
-      age: '',
+      // age: '',
       message: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
@@ -34,7 +34,7 @@ export default {
         name: this.firstName + ' ' + this.lastName,
         email: this.email,
         phone: this.phone,
-        age: this.age,
+        // age: this.age,
         message: this.message
       })
         .then(res => {
@@ -48,7 +48,7 @@ export default {
       this.lastName = ''
       this.email = ''
       this.phone = ''
-      this.age = ''
+      // this.age = ''
       this.message = ''
     },
     focused (name) {
