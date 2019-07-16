@@ -1,5 +1,8 @@
 .form-contact#form
-  form.form-contact__form(@submit.prevent='validate' method='post')
+  .form-contact__thankyou(v-if='formSubmitted')
+    h1.form-contact__thankyou-title Thank You!
+    p.form-contact__thankyou-text Thanks for getting in touch. We'll get back to you shortly! 
+  form.form-contact__form(@submit.prevent='validate' method='post' v-if='!formSubmitted')
     
     .form-contact__group.form-contact__group--inline
       .form-contact__item
