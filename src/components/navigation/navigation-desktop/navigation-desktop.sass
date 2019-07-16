@@ -62,6 +62,7 @@
   &__social-link
     display: inline-block
     width: 32px
+    height: 32px
     pointer-events: all
 
     &:not(:last-child)
@@ -132,84 +133,3 @@
 
       &:hover
         color: $white
-
-
-    // &:nth-child(3)
-    //   &:after
-    //     position: absolute
-    //     bottom: 0
-    //     left: 0
-    //     width: 200%
-    //     height: 10px
-    //     content: ''
-    //
-    //   &:hover
-    //     .navigation-desktop__dropdown
-    //       opacity: 1
-    //       pointer-events: all
-
-    @media screen and (max-width: 970px)
-      padding: 1.5rem .5rem
-
-  &__dropdown
-    position: absolute
-    top: 100%
-    left: 1rem
-    transition: opacity .3s ease
-    opacity: 0
-    box-shadow: 0 2px 6px -2px rgba($black, .14)
-    background: $white
-    width: rem-calc(260)
-    pointer-events: none
-
-  &__sublink
-    position: relative
-    margin-top: rem-calc(8)
-    padding: 1rem rem-calc(10)
-    text-align: center
-
-    &--icon
-      transition: background .2s ease
-      background: rgba($c6, .2)
-
-      &:hover
-        background: #eee
-
-    &:hover
-      .navigation-desktop__overlay
-        background: rgba($white, .64)
-
-      .navigation-desktop__label
-        color: $c1
-
-  &__overlay
-    @extend .overlay
-    transition: background .2s ease
-    z-index: 1
-    background: rgba($c1, .65)
-
-  &__bg
-    @extend .image--bg
-
-  &__sublink-icon
-    display: inline-block
-    margin-top: rem-calc(4)
-    margin-right: rem-calc(6)
-    width: rem-calc(48)
-    vertical-align: middle
-    line-height: 2
-
-  &__label
-    position: relative
-    transition: color .2s ease
-    z-index: 2
-    text-transform: uppercase
-    color: $white
-    font-family: $font-alt
-    font-size: 26px
-
-    &--small
-      line-height: 2
-      color: $c1
-      font-size: 16px
-      font-weight: 600
