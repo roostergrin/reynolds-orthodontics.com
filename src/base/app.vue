@@ -3,6 +3,7 @@
 <script>
 import BlockExam from 'block/block-exam/block-exam'
 import TheFooter from 'components/footer/footer'
+import FooterMobile from 'components/footer/footer-mobile/footer-mobile'
 import TheNavigation from 'components/navigation/navigation/'
 
 export default {
@@ -16,6 +17,7 @@ export default {
   components: {
     BlockExam,
     TheFooter,
+    FooterMobile,
     TheNavigation
   }
 }

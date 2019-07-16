@@ -1,0 +1,14 @@
+.footer-mobile(v-if='content')
+  .footer-mobile__container
+    .footer-mobile__links-bar
+      a.footer-mobile__link(:href='content.phone.phone_link' target='_blanks')
+        AppIcon.footer-mobile__icon(name='phone')
+        .footer-mobile__text Phone
+      a.footer-mobile__link(href='mailto:info@reynolds-ortho.com')
+        AppIcon.footer-mobile__icon(name='mail')
+        .footer-mobile__text Email
+      a.footer-mobile__link(:href='content.location.address_link' target='_blank')
+        AppIcon.footer-mobile__icon(name='marker')
+        .footer-mobile__text Address
+          
+  
