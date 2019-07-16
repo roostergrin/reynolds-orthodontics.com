@@ -1,15 +1,14 @@
-<template lang="pug" src="./custom-about-doctor.pug"></template>
+<template lang="pug" src="./custom-about-grid.pug"></template>
 
 <script>
 export default {
   data () {
     return {
-      show: 0,
       active: false,
       options: {
         root: null,
         rootMargin: '0px',
-        threshold: [0.4]
+        threshold: [0.5]
       }
     }
   },
@@ -19,11 +18,8 @@ export default {
     }
   },
   methods: {
-    handleClick (i) {
-      this.show = i
-    },
-    onScroll ({going}) {
-      if (going === 'in') {
+    onScroll ({going, direction}) {
+      if (going === 'in' && direction !== undefined) {
         this.active = true
       }
     }

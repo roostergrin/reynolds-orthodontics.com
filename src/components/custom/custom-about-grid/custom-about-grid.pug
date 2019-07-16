@@ -1,0 +1,9 @@
+.custom-about-grid(v-waypoint='{ active: true, callback: onScroll, options: options }', :class="{ 'custom-about-grid--active': active }")
+  .custom-about-grid__container
+    h1.custom-about-grid__header What Sets Us Apart
+    .custom-about-grid__item(v-for='item, i in content.items', :key='i', :style="{ transitionDelay: (i * .1) + 's' }")
+      .custom-about-grid__title
+        AppIcon.custom-about-grid__icon(:name='item.icon')
+        h4.custom-about-grid__title-text(v-html='item.title')
+      .custom-about-grid__text(v-html='item.text')
+      

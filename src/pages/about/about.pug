@@ -1,5 +1,6 @@
 .pages-about(v-if='props')
   HeroComponent(:props='props.hero')
+  CustomGrid(:content='props.grid')  
   CustomDoctor(:content='props.doctor')
   CustomTeam(:content='props.team' three)
   CustomOffice(:content='props.office')  

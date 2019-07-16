@@ -1,0 +1,43 @@
+.custom-about-grid
+  background: $gr2
+  padding: 4rem 0
+
+  &__container
+    @extend .container
+
+  &__header
+    @extend .col-12
+    margin-bottom: 2rem
+    text-align: center
+
+  &__item
+    @extend .col-5
+    @extend .col-1--offset
+    @include tablet
+      padding: 0 1rem
+      width: 50%
+    @include phone-lg
+      padding: 0
+      width: 100%
+    transition: opacity .3s ease-in
+    opacity: 0
+    margin-bottom: 2rem
+
+    .custom-about-grid--active &
+      opacity: 1
+
+  &__title
+    display: flex
+    align-items: center
+    margin-bottom: rem-calc(10)
+
+    &-text
+      color: $c1
+      font-size: 20px
+
+  &__icon
+    margin-right: 1rem
+    // margin-left: -50px
+    width: 34px
+    height: 34px
+    fill: $c2
