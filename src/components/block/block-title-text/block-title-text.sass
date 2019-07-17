@@ -7,8 +7,22 @@
     @extend .container
 
   &__col
-    @extend .col-8
-    @extend .col-2--offset
+    @extend .col-7
+    @extend .col-1--offset
+
+    .pages-financials &
+      @extend .col-8
+      @extend .col-2--offset
+
+    &--image
+      @extend .col-4
+      position: relative
+
+  &__image
+    @extend .image
+
+    .pages-new-patient &
+      max-height: 392px
 
   &__body
     padding: 2rem 0

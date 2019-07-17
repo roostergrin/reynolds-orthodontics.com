@@ -7,15 +7,28 @@
     display: none
   position: fixed
   top: 40%
-  right: -82px
+  right: -94px
   transform: rotate(90deg)
+  transition: background .2s ease
   z-index: 9999
+  background: $c2
+  cursor: pointer
+  padding: rem-calc(8) rem-calc(21)
+
+  &:hover
+    background: $c2--hover
+
+    .block-exam__icon
+      transform: translateX(2px)
+      transition: transform .5s cubic-bezier(.52, 1.5, .16, 1.5)
 
   &__btn
-    transition: background .2s ease
-    background: $c2
-    padding: rem-calc(8) rem-calc(21)
     color: $white
 
-    &:hover
-      background: $c2--hover
+  &__icon
+    display: inline-block
+    transition: transform .3s ease
+    margin-right: rem-calc(10)
+    width: 20px
+    height: 18px
+    fill: $white

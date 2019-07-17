@@ -29,7 +29,7 @@ const router = new VueRouter({
     },
     {
       path: '/treatments',
-      name: 'Treatments',
+      name: 'What We Do',
       navigation: true,
       component: TreatmentsPage,
       children: [
@@ -59,22 +59,22 @@ const router = new VueRouter({
       ]
     },
     {
-      path: '/new-patient',
-      name: 'New Patient',
+      path: '/new-patients',
+      name: 'New Patients',
       navigation: true,
       component: NewPatientPage
+    },
+    {
+      path: '/financial',
+      name: 'Financial',
+      navigation: true,
+      component: FinancialsPage
     },
     {
       path: '/contact',
       name: 'Contact',
       navigation: true,
       component: ContactPage
-    },
-    {
-      path: '/financials',
-      name: 'Financials',
-      navigation: true,
-      component: FinancialsPage
     },
     {
       path: '/style-guide',

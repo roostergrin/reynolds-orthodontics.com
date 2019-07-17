@@ -1,5 +1,7 @@
 .block-title-text
   .block-title-text__container
+    .block-title-text__col--image(v-if='content.image')
+      AppLazyImg.block-title-text__image(:src='content.image')
     .block-title-text__col
       h3.block-title-text__title(v-html='content.title')
       .block-title-text__body(v-html='content.body')
