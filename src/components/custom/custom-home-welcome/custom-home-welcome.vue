@@ -7,6 +7,7 @@ export default {
     return {
       active: false,
       windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth,
       intersectionOptions: {
         root: null,
         rootMargin: '0px',
