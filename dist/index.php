@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> lang="en" role='main'>
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php wp_head(); ?>
-    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB105NxpkVIDtjJeUTEt-9Ahtb0Qpb1Djo&amp"></script>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php wp_head(); ?>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB105NxpkVIDtjJeUTEt-9Ahtb0Qpb1Djo&amp"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144282042-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-144282042-1');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
 </head>
 <body>
   <div id='app' role='application'></div>
