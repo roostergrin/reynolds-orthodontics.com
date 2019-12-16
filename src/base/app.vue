@@ -2,6 +2,7 @@
 
 <script>
 import BlockExam from 'block/block-exam/block-exam'
+import BlockTopPhone from 'block/block-top-phone/block-top-phone'
 import TheFooter from 'components/footer/footer'
 import FooterMobile from 'components/footer/footer-mobile/footer-mobile'
 import TheNavigation from 'components/navigation/navigation/'
@@ -16,6 +17,7 @@ export default {
   },
   components: {
     BlockExam,
+    BlockTopPhone,
     TheFooter,
     FooterMobile,
     TheNavigation
