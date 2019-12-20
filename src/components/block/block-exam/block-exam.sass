@@ -3,11 +3,15 @@
   //   top: 25%
   // @include tablet
   //   top: 25%
+  @media screen and (min-width: 1441px)
+    right: calc((100% - 1440px)/2)
+  @media screen and (max-width: 1440px)
+    right: 0
+  calc(1440px + 64px)
   @include phone-lg
     display: none
   position: fixed
   top: 0
-  right: 0
   // top: 40%
   // right: -94px
   // transform: rotate(90deg)
