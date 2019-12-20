@@ -1,6 +1,9 @@
 .navigation-mobile
+  @media screen and (max-width: 801px)
+    top: 2.5rem
+  @media screen and (max-width: 480px)
+    top: .5rem
   position: absolute
-  top: 34px
   left: 0
   transition: background .4s ease
   z-index: 9999
@@ -31,6 +34,8 @@
     height: 56px
 
   &__home
+    @media screen and (max-width: 800px) and (min-width: 481px)
+      top: 0
     position: absolute
     top: 50%
     left: 1rem
@@ -57,6 +62,8 @@
 
   &__hamburger
     @include hamburger-basic($white, .35s, 1.5rem, 14px)
+    position: absolute
+    top: 2.75rem
 
     .navigation-mobile--scrolling &
       span
