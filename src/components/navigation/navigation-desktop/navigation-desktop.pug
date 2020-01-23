@@ -1,4 +1,6 @@
 .navigation-desktop(:class="{ 'navigation-desktop--fixed': fixed}" v-if='props')
+  BlockExam(v-if="!fixed")
+  BlockExam#block2(v-else)
   .navigation-desktop__topbar
     a.navigation-desktop__phone(:href='props.phone.phone_link')
       .navigation-desktop__phone-number(v-html='props.phone.phone_number')
