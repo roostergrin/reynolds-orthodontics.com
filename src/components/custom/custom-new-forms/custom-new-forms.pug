@@ -5,8 +5,9 @@
       h3.custom-new-forms__title(v-html='content.title')
       .custom-new-forms__body(v-html='content.body')
       .custom-new-forms__buttons
-        router-link.custom-new-forms__button(
+        a.custom-new-forms__button(
           v-for='(button, i) in content.buttons'
           :key='"button - " + i'
-          :to='button.href'
+          :href='button.href'
+          target='_blank'
           v-html='button.label')
