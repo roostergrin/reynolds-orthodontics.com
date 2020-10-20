@@ -15,6 +15,7 @@ export default {
       message: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
+      formSuccess: false,
       active: ''
     }
   },
@@ -38,10 +39,17 @@ export default {
         message: this.message
       })
         .then(res => {
-          this.active = ''
-          this.clearForm()
+          this.formSuccess = true
+          setTimeout(() => {
+            window.location.href = 'https://reynolds-orthodontics.com/thank-you'
+          }, 400)
+          setTimeout(() => {
+            this.errors.clear()
+          }, 1100)
         })
-        .catch(e => { console.log(e) })
+        .catch(e => {
+          console.log(e, 'submitted')
+        })
     },
     clearForm () {
       this.firstName = ''

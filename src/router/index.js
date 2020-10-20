@@ -9,6 +9,7 @@ const FinancialsPage = () => import('pages/financials/financials')
 const HomePage = () => import('pages/home/home')
 const NewPatientPage = () => import('pages/new-patient/new-patient')
 const TreatmentsPage = () => import('pages/treatments/treatments')
+const ThankyouPage = () => import('pages/thank-you/thank-you')
 
 Vue.use(VueRouter)
 
@@ -75,6 +76,12 @@ const router = new VueRouter({
       name: 'Contact',
       navigation: true,
       component: ContactPage
+    },
+    {
+      path: '/thank-you',
+      name: 'Thank You',
+      navigation: false,
+      component: ThankyouPage
     },
     {
       path: '/style-guide',

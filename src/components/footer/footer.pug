@@ -3,7 +3,7 @@ footer.footer(v-if='content')
     .footer__item
       AppIcon.footer__logo(name='logo-footer')
       a.footer__address(:href='content.location.address_link' v-html='content.location.address' target='_blank' rel='noopener noreferrer')
-      a.footer__phone(:href='content.phone.phone_link' v-html='content.phone.phone_number')
+      a.footer__phone(:href='content.phone.phone_link' v-html='content.phone.phone_number' @click='callGa()')
       a.footer__privacy-policy(:href='content.privacy_policy') Privacy Policy
       .footer__links
         a.footer__link(v-for='link, i in content.social_media', :key='i', :href='link.link')

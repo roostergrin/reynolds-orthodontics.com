@@ -1,0 +1,7 @@
+.pages-about.thankyou-page(v-if='props')
+  HeroComponent(:props='props.hero')
+  .custom-about-grid
+    .custom-about-grid__container
+      .block-tabs__container
+        .block-tabs__title-col
+          h3.custom-about-grid__header.text-center(v-html='props.thank_content')

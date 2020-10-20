@@ -2,7 +2,7 @@
   BlockExam(v-if="!fixed")
   BlockExam#block2(v-else)
   .navigation-desktop__topbar
-    a.navigation-desktop__phone(:href='props.phone.phone_link')
+    a.navigation-desktop__phone(:href='props.phone.phone_link' @click='callGa()')
       .navigation-desktop__phone-number(v-html='props.phone.phone_number')
     .navigation-desktop__social-links
       a.navigation-desktop__social-link(v-for='social, i in props.social_media', :href='social.link' target='_blank' rel='noreferrer noopener')
