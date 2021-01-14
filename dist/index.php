@@ -14,14 +14,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MT5JS5J');</script>
 <!-- End Google Tag Manager -->
 
-<script>(function(){var w=window;var d=document;var l=function(){var
+<!-- <script>(function(){var w=window;var d=document;var l=function(){var
 s=d.createElement('script');s.type='text/javascript';
 s.async=true;s.src="https://platform.swellcx.com/widget/js/chat.js#146cf710-acd6-4dca-836d-99b55fd7924f";
 s.setAttribute('data-api-token','146cf710-acd6-4dca-836d-99b55fd7924f');
 var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};
 if(w.attachEvent){w.attachEvent('onload',l);}
 else{w.addEventListener('load',l,false);}})();
-</script>  
+</script>   -->
 
 </head>
 <body>
