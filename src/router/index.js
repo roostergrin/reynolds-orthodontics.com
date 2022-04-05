@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import StyleGuide from 'pages/style-guide/style-guide'
+import Accessibility from '@/pages/accessibility/accessibility'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const AboutPage = () => import('pages/about/about')
@@ -82,6 +83,12 @@ const router = new VueRouter({
       name: 'Thank You',
       navigation: false,
       component: ThankyouPage
+    },
+    {
+      path: '/accessibility',
+      name: 'Accessibility',
+      navigation: false,
+      component: Accessibility
     },
     {
       path: '/style-guide',
