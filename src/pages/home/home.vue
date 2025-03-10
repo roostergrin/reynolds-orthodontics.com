@@ -7,6 +7,7 @@ import CustomInstagram from 'custom/custom-home-instagram/custom-home-instagram'
 import CustomTestimonials from 'custom/custom-home-testimonials/custom-home-testimonials'
 import CustomWelcome from 'custom/custom-home-welcome/custom-home-welcome'
 import HeroComponent from 'components/hero/hero'
+import CustomHomeLocation from 'custom/custom-home-location/custom-home-location'
 
 export default {
   computed: {
@@ -20,7 +21,8 @@ export default {
     CustomInstagram,
     CustomTestimonials,
     CustomWelcome,
-    HeroComponent
+    HeroComponent,
+    CustomHomeLocation
   }
 }
 </script>

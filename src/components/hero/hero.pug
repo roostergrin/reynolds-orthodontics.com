@@ -8,4 +8,5 @@
   .hero__content
     AppIcon.hero__logo(name='logo-hero' v-if='$route.path !== "/"')
     AppIcon.hero__logo.hero__logo--home(name='logo-main' v-if='$route.path === "/"')  
-    .hero__title(v-html='props.title' v-if='$route.path !== "/"')    
+    .hero__title(v-html='props.title' v-if='$route.path !== "/"')
+    .hero_subtitle(v-html='props.sub')
