@@ -5,4 +5,19 @@
   //- CustomTestimonials(:content='props.testimonials')
   CustomAppointment
   CustomInstagram
+  .homereview(v-bind:style="{ backgroundImage: 'url('+ props.hmrevbgimge +')'}")
+    .homereview__slider-wrapper
+      h2.homereview__mainheading.homereview__text-center(v-if='props.hmreviewheading' v-html:span='props.hmreviewheading')
+      .homereview__slider-home(v-if='props.hmreviewlist')
+        swiper(:options='swiperOption1')
+          swiper-slide(v-for='(hmrevlist, index) in props.hmreviewlist' :key='index')
+            .homereview__container_manual.homereview__clearfix
+              .homereview__info
+                .homereview__heading(v-if='hmrevlist.text' v-html='hmrevlist.text')
+                .homereview__content
+                  span ~
+                  span(v-if='hmrevlist.cname' v-html='hmrevlist.cname')
+                .homereview__rating
+                  img.homereview__rating1(src='https://reynolds-orthodontics.com/wp-content/uploads/star-rating1.png' alt='star-rating')
+          .swiper-pagination(slot='pagination')
   CustomHomeLocation(:content='props.locations')

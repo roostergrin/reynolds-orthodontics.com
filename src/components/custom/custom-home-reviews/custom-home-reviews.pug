@@ -1,0 +1,14 @@
+.homepage-slider
+    .slider-home()
+    swiper(:options='swiperOption1')
+      swiper-slide
+        .container_manual.clearfix
+          .homepage-slider_info
+            .homepage-slider__heading bbb
+            .homepage-slider__content aaa
+        .swiper-pagination(slot='pagination')
+        .swiper_control
+        .swiper-button-prev.swiper-button-white(slot='button-prev')
+          .fa.fa-arrow-circle-left
+        .swiper-button-next.swiper-button-white(slot='button-next') 
+          .fa.fa-arrow-circle-right

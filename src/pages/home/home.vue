@@ -23,6 +23,35 @@ export default {
     CustomWelcome,
     HeroComponent,
     CustomHomeLocation
+  },
+  data () {
+    return {
+      swiperOption1: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 1500,
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 30
+          }
+        }
+      }
+    }
   }
 }
 </script>
