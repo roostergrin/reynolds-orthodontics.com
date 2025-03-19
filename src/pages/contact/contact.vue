@@ -3,6 +3,7 @@
 <script>
 import ContactSection from 'custom/custom-contact-section/custom-contact-section'
 import HeroComponent from 'components/hero/hero'
+import CustomHomeLocation from 'custom/custom-home-location/custom-home-location'
 
 export default {
   computed: {
@@ -12,7 +13,8 @@ export default {
   },
   components: {
     ContactSection,
-    HeroComponent
+    HeroComponent,
+    CustomHomeLocation
   }
 }
 </script>
