@@ -7,6 +7,11 @@
       .custom-contact-section__form
         FormContact
     .custom-contact-section__col.custom-contact-section__col--right
-      AppIcon.custom-contact-section__icon(name='marker')
-      a.custom-contact-section__address(:href='props.location.address_link' v-html='props.location.address' target='_blank' rel='noopener noreferrer')
-      a.custom-contact-section__phone(:href='props.phone.phone_link' v-html='props.phone.phone_number')
+      .custom-contact-section__address-list
+        AppIcon.custom-contact-section__icon(name='marker')
+        a.custom-contact-section__address(:href='props.location.address_link' v-html='props.location.address' target='_blank' rel='noopener noreferrer')
+        a.custom-contact-section__phone(:href='props.phone.phone_link' v-html='props.phone.phone_number')
+      .custom-contact-section__address-list
+        AppIcon.custom-contact-section__icon(name='marker')
+        a.custom-contact-section__address(:href='props.location.fortadlink' v-html='props.location.fortadd' target='_blank' rel='noopener noreferrer')
+        a.custom-contact-section__phone(:href='props.phone.phone_link' v-html='props.phone.phone_number')

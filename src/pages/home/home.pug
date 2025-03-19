@@ -5,7 +5,7 @@
   //- CustomTestimonials(:content='props.testimonials')
   CustomAppointment
   CustomInstagram
-  .homereview(v-bind:style="{ backgroundImage: 'url('+ props.hmrevbgimge +')', backgroundSize: 'cover'}")
+  .homereview(v-bind:style="{ backgroundImage: 'url('+ props.hmrevbgimge +')'}")
     .homereview__slider-wrapper
       h2.homereview__mainheading.homereview__text-center(v-if='props.hmreviewheading' v-html:span='props.hmreviewheading')
       .homereview__slider-home(v-if='props.hmreviewlist')

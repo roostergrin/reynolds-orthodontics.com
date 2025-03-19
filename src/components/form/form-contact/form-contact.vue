@@ -8,9 +8,11 @@ export default {
   data () {
     return {
       firstName: '',
-      lastName: '',
+      patientdob: '',
+      parentName: '',
       email: '',
-      phone: '',
+      phoneNumber: '',
+      overallExperience: '',
       // age: '',
       message: '',
       postUrl: api + '/rg-mail/v1/contact',
@@ -32,10 +34,12 @@ export default {
     onSubmit () {
       this.formSubmitted = true
       axios.post(this.postUrl, {
-        name: this.firstName + ' ' + this.lastName,
+        firstName: this.firstName,
+        patientdob: this.patientdob,
+        parentName: this.parentName,
         email: this.email,
-        phone: this.phone,
-        // age: this.age,
+        phoneNumber: this.phoneNumber,
+        overallExperience: this.overallExperience,
         message: this.message
       })
         .then(res => {
@@ -53,9 +57,11 @@ export default {
     },
     clearForm () {
       this.firstName = ''
-      this.lastName = ''
+      this.patientdob = ''
+      this.parentName = ''
       this.email = ''
-      this.phone = ''
+      this.phoneNumber = ''
+      this.overallExperience = ''
       // this.age = ''
       this.message = ''
     },

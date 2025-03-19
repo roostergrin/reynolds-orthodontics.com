@@ -3,40 +3,69 @@
     h1.form-contact__thankyou-title Thank You!
     p.form-contact__thankyou-text Thanks for getting in touch. We'll get back to you shortly! 
   form.form-contact__form(@submit.prevent='validate' method='post' v-if='!formSubmitted')
-    
+
     .form-contact__group.form-contact__group--inline
-      .form-contact__item
-        span.form-contact__label(:class="{ 'form-contact__label--active': firstName !== '' || active === 'firstName' }" @click='focused("firstName")') First Name #[span(:class="{'danger': errors.has('email')}") *]
+      .form-contact__item.form-contact__itemfull
+        span.form-contact__label(:class="{ 'form-contact__label--active': firstName !== '' || active === 'firstName' }" @click='focused("firstName")') Patient Name(First and Last) #[span(:class="{'danger': errors.has('email')}") *]
         input.form-contact__input(name='firstName', v-model='firstName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('firstName') && !formSuccess }" type='text' @focus='focused("firstName")')
         .form-contact__message
-            span(v-show="errors.has('firstName') && !formSuccess") Please fill in your first name.
-          
-      .form-contact__item
-        span.form-contact__label(:class="{ 'form-contact__label--active': lastName !== '' || active === 'lastName' }" @click='focused("lastName")') Last Name #[span(:class="{'danger': errors.has('email')}") *]
-        input.form-contact__input(name='lastName', v-model='lastName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('lastName') && !formSuccess }" type='text' @click='focused("lastName")')
-        .form-contact__message
-            span(v-show="errors.has('lastName') && !formSuccess") Please fill in your last name.      
-    
+            span(v-show="errors.has('firstName') && !formSuccess") Please fill in your Patient Name.
+
     .form-contact__group.form-contact__group--inline
-      .form-contact__item
+      .form-contact__item.form-contact__itemfull
+        span.form-contact__label.form-contact__label1(:class="{ 'form-contact__label--active': patientdob !== '' || active === 'patientdob' }" @click='focused("patientdob")') Patient Birthdate * #[span(:class="{'danger': errors.has('email')}") ]
+        input.form-contact__input(name='patientdob', v-model='patientdob', v-validate="'required|date_format:yyyy-MM-dd'", :class="{ 'form-contact__input--error': errors.has('patientdob') && !formSuccess }" type='date' @focus='focused("patientdob")')
+        .form-contact__message
+            span(v-show="errors.has('patientdob') && !formSuccess") Please fill in your Patient Birthdate.
+
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item.form-contact__itemfull
+        span.form-contact__label(:class="{ 'form-contact__label--active': parentName !== '' || active === 'parentName' }" @click='focused("parentName")') Parent Name #[span(:class="{'danger': errors.has('email')}")]
+        input.form-contact__input(name='parentName', v-model='parentName', v-validate="'alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('parentName') && !formSuccess }" type='text' @focus='focused("parentName")')
+        .form-contact__message
+            span(v-show="errors.has('parentName') && !formSuccess") Please fill in your Parent Name.
+
+
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item.form-contact__itemfull
         span.form-contact__label(:class="{ 'form-contact__label--active': email !== '' || active === 'email' }" @click='focused("email")') Email Address #[span(:class="{'danger': errors.has('email')}") *]
         input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') && !formSuccess }" @click='focused("email")')
         .form-contact__message
           span(v-show="errors.has('email') && !formSuccess") Please enter a valid email.
-    
-      .form-contact__item.form-contact__item--not-required
-        span.form-contact__label(:class="{ 'form-contact__label--active': phone !== '' || active === 'phone' }" @click='focused("phone")') Phone Number
-        input.form-contact__input(name='phone', v-model='phone' @focus='focused("phone")')
-    
+
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item.form-contact__itemfull
+        span.form-contact__label(:class="{ 'form-contact__label--active': phoneNumber !== '' || active === 'phoneNumber' }" @click='focused("phoneNumber")') Phone Number * #[span(:class="{'danger': errors.has('phoneNumber')}")]
+        input.form-contact__input(name='phoneNumber', v-model='phoneNumber', v-validate="'required|numeric'", :class="{ 'form-contact__input--error': errors.has('phoneNumber') && !formSuccess }" type='text' @focus='focused("phoneNumber")')
+        .form-contact__message
+            span(v-show="errors.has('phoneNumber') && !formSuccess") Please fill in your phone Number.
+
+
+
+      .form-contact__item.form-contact__itemfull
+        //- label.form-contact__label--radio(:class="{ 'form-contact__label--active': overallExperience }") How would you prefer we reach you:
+        label.form-contact__label--radio  How would you prefer we reach you:
+        .form-contact__custom-radio-grid
+          .form-contact__custom-control-inline
+            label.radioclear
+              input.form-contact__input.form-contact__input-radio(name='overallExperience', v-model='overallExperience', checked='checked', v-validate="'required'", :class="{ 'form-contact__input--error': errors.has('overallExperience') }", type='radio' , value='Call')
+            span Call
+          .form-contact__custom-control-inline
+            label.radioclear
+              input.form-contact__input.form-contact__input-radio(name='overallExperience', v-model='overallExperience', :class="{ 'form-contact__input--error': errors.has('overallExperience') }", type='radio' , value='Text')
+            span Text
+        .form-contact__error-message(v-show="errors.has('overallExperience')") Please select one call or text.
+
+
     //- .form-contact__group.form-contact__group--inline
     //-   .form-contact__item.form-contact__item--not-required
     //-     span.form-contact__label(:class="{ 'form-contact__label--active': age !== '' || active === 'age' }" @click='focused("age")') Patient's Age
     //-     input.form-contact__input.form-contact__input(name='age', v-model='age'  @focus='focused("age")')
-    
+
     .form-contact__group.form-contact__group--textarea
       span.form-contact__label(:class="{ 'form-contact__label--active': message !== '' || active === 'message' }" @click='focused("message")') What can we do to help?
       textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message'  @focus='focused("message")' rows='3')
-    
+
     .form-contact__group--button
       button.form-contact__submit-button(@click='validate' type='submit', :disabled='formSubmitted')
         span Send
