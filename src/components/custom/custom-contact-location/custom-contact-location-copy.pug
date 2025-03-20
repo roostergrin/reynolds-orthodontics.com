@@ -1,0 +1,28 @@
+.custom-financials-location
+  .custom-financials-location__container
+    .custom-financials-location__row
+      .custom-financials-location__col-md-12
+        .custom-financials-location__section-heading
+          h3.custom-financials-location__section-heading1
+    .custom-financials-location__row
+      .custom-financials-location__col-grid
+        .custom-financials-location__location-info
+          .custom-financials-location__text-info.custom-financials-location__text-center
+            h4.custom-financials-location__subheading(v-html='content.indheading')
+            .custom-financials-location__list
+              .custom-financials-location__listing
+                a.custom-financials-location__linking(:href='content.glink' target='_blank')
+                  .custom-financials-location__icon
+                    AppIcon.custom-financials-location__icon1(name='marker-map')
+                  .custom-financials-location__locationname(v-html='content.iadd')
+      .custom-financials-location__col-grid
+        .custom-financials-location__location-info
+          .custom-financials-location__iframemap
+          .custom-financials-location__text-info.custom-financials-location__text-center
+            h4.custom-financials-location__subheading(v-html='content.fheading')
+            .custom-financials-location__list
+              .custom-financials-location__listing
+                a.custom-financials-location__linking(:href='content.mglink' target='_blank')
+                  .custom-financials-location__icon
+                    AppIcon.custom-financials-location__icon1(name='marker-map')
+                  .custom-financials-location__locationname(v-html='content.fortad')

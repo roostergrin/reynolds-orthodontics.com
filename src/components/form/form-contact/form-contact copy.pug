@@ -13,14 +13,14 @@
 
     .form-contact__group.form-contact__group--inline
       .form-contact__item.form-contact__itemfull
-        span.form-contact__label(:class="{ 'form-contact__label--active': patientdob !== '' || active === 'patientdob' }" @click='focused("patientdob")') Patient Birthdate #[span(:class="{'danger': errors.has('patientdob')}") *]
-        input.form-contact__input#datepicker(name='patientdob', v-model='patientdob', v-validate="'required'", :class="{ 'form-contact__input--error': errors.has('patientdob') && !formSuccess }" type='text' @focus='focused("patientdob")')
+        span.form-contact__label.form-contact__label1(:class="{ 'form-contact__label--active': patientdob !== '' || active === 'patientdob' }" @click='focused("patientdob")') Patient Birthdate * #[span(:class="{'danger': errors.has('email')}") ]
+        input.form-contact__input(name='patientdob', v-model='patientdob', v-validate="'required|date_format:yyyy-MM-dd' ", :class="{ 'form-contact__input--error': errors.has('patientdob') && !formSuccess }" type='date' @focus='focused("patientdob")')
         .form-contact__message
             span(v-show="errors.has('patientdob') && !formSuccess") Please fill in your Patient Birthdate.
 
     .form-contact__group.form-contact__group--inline
       .form-contact__item.form-contact__itemfull
-        span.form-contact__label(:class="{ 'form-contact__label--active': parentName !== '' || active === 'parentName' }" @click='focused("parentName")') Parent Name #[span(:class="{'danger': errors.has('parentName')}")]
+        span.form-contact__label(:class="{ 'form-contact__label--active': parentName !== '' || active === 'parentName' }" @click='focused("parentName")') Parent Name #[span(:class="{'danger': errors.has('email')}")]
         input.form-contact__input(name='parentName', v-model='parentName', v-validate="'alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('parentName') && !formSuccess }" type='text' @focus='focused("parentName")')
         .form-contact__message
             span(v-show="errors.has('parentName') && !formSuccess") Please fill in your Parent Name.

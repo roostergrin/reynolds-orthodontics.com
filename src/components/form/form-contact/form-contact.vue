@@ -3,6 +3,9 @@
 <script>
 import api from 'api'
 import axios from 'axios'
+import $ from 'jquery'
+import 'jquery-ui/themes/base/all.css'
+import 'jquery-ui/ui/widgets/datepicker'
 
 export default {
   data () {
@@ -30,6 +33,18 @@ export default {
           }
         })
         .catch(e => { console.log(e) })
+    },
+    initializeDatepicker () {
+      try {
+        $('#datepicker').datepicker({
+          dateFormat: 'dd-mm-yy',
+          onSelect: (dateText) => {
+            this.patientdob = dateText
+          }
+        })
+      } catch (e) {
+        console.error('Error initializing datepicker:', e)
+      }
     },
     onSubmit () {
       this.formSubmitted = true
@@ -68,6 +83,9 @@ export default {
     focused (name) {
       this.active = name
     }
+  },
+  mounted () {
+    this.initializeDatepicker()
   }
 }
 </script>

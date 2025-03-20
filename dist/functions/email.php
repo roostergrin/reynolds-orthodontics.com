@@ -19,11 +19,9 @@ function rg_serve_route () {
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
-  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['firstName'] . '</p>';
+  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['name'] . '</p>';
   $message .= '<p><h4><strong>Email: </strong></h4>' . $data['email'] . '</p>';
-  $message .= '<p><h4><strong>Phone: </strong></h4>' . $data['phoneNumber'] . '</p>';
-  $message .= '<p><h4><strong>Patient DOB: </strong></h4>' . $data['patientdob'] . '</p>';
-  $message .= '<p><h4><strong>Parent Name: </strong></h4>' . $data['parentName'] . '</p>';
+  $message .= '<p><h4><strong>Phone: </strong></h4>' . $data['phone'] . '</p>';
   $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
   $message .= '</body></html>';
 
