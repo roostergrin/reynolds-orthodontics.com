@@ -8,6 +8,7 @@ import CustomTestimonials from 'custom/custom-home-testimonials/custom-home-test
 import CustomWelcome from 'custom/custom-home-welcome/custom-home-welcome'
 import HeroComponent from 'components/hero/hero'
 import CustomHomeLocation from 'custom/custom-home-location/custom-home-location'
+import TheFooter from 'components/footer/footer'
 
 export default {
   computed: {
@@ -22,7 +23,8 @@ export default {
     CustomTestimonials,
     CustomWelcome,
     HeroComponent,
-    CustomHomeLocation
+    CustomHomeLocation,
+    TheFooter
   },
   data () {
     return {

@@ -1,13 +1,15 @@
 .navigation-desktop(:class="{ 'navigation-desktop--fixed': fixed}" v-if='props')
   BlockExam(v-if="!fixed")
   BlockExam#block2(v-else)
+  //- a.block-top-phone(href='tel:+18036503061' @click='callGaInfo()')
+  //-   | (803) 650-3061
   .navigation-desktop__topbar
     a.navigation-desktop__phone(:href='props.phone.phone_link' @click='callGa()')
       .navigation-desktop__phone-number(v-html='props.phone.phone_number')
     .navigation-desktop__social-links
       a.navigation-desktop__social-link(v-for='social, i in props.social_media', :href='social.link' target='_blank' rel='noreferrer noopener')
         AppIcon.navigation-desktop__social-icon(:name='social.icon')
-  .navigation-desktop__container        
+  .navigation-desktop__container
     .navigation-desktop__navbar
       router-link.navigation-desktop__home(to='/')
         AppIcon.navigation-desktop__logo(name='logo-main')

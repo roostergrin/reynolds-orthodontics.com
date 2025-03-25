@@ -5,6 +5,7 @@ import BlockTitleText from 'components/block/block-title-text/block-title-text'
 import CustomFinancialsFaq from 'components/custom/custom-financials-faq/custom-financials-faq'
 import CustomNewForms from 'components/custom/custom-new-forms/custom-new-forms'
 import HeroComponent from 'components/hero/hero'
+import CustomContactLocation from 'custom/custom-contact-location/custom-contact-location'
 
 export default {
   computed: {
@@ -16,7 +17,8 @@ export default {
     BlockTitleText,
     CustomFinancialsFaq,
     CustomNewForms,
-    HeroComponent
+    HeroComponent,
+    CustomContactLocation
   }
 }
 </script>

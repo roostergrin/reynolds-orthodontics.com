@@ -13,9 +13,12 @@
     box-shadow: $bs2
     background: white
     padding: .75rem 1rem
+    width: 100%
+    max-width: 96%
 
   &__links-bar
     display: flex
+    justify-content: center
 
   &__link
     margin: auto 1rem
@@ -45,3 +48,43 @@
     fill: $c2
     // background: pink
     // height: 1rem
+
+  &__nocss
+    position: relative
+
+  &__popup
+    position: fixed
+    background: #3facdb
+    width: 100%
+    max-width: 90%
+    padding: 15px
+    bottom: 0
+    transform: translate(-50%, -50%)
+    left: 50%
+    z-index: 9
+    bottom: 0
+
+  &__popuplist
+    margin-bottom: 10px
+    padding-bottom: 10px
+    border-bottom: 1px solid #f5f5f51f
+
+    h4
+      color: #fff
+    a
+      color: #fff
+
+  &__popuplist1
+    border-bottom: 0px
+
+  &__arrow
+    position: absolute
+    bottom: -25px
+    left: 50%
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    border-width: 25px 25px 0
+    border-style: solid
+    border-color: #3facdb transparent transparent
+    width: 0
+    height: 0

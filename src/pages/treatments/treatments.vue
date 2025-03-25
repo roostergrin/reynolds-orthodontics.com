@@ -4,6 +4,7 @@
 import BlockTabs from 'components/block/block-tabs/block-tabs'
 import CustomTreatments from 'custom/custom-treatments-options/custom-treatments-options'
 import HeroComponent from 'components/hero/hero'
+import CustomContactLocation from 'custom/custom-contact-location/custom-contact-location'
 
 export default {
   computed: {
@@ -14,7 +15,8 @@ export default {
   components: {
     BlockTabs,
     CustomTreatments,
-    HeroComponent
+    HeroComponent,
+    CustomContactLocation
   }
 }
 </script>

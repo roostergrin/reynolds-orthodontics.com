@@ -2,6 +2,10 @@
   .custom-contact-location__container
     .custom-contact-location__row
       .custom-contact-location__col-md-12
+        .custom-contact-location__logo
+          AppIcon.custom-contact-location__logo1(name='logo-footer')
+    .custom-contact-location__row
+      .custom-contact-location__col-md-12
         .custom-contact-location__section-heading
           h3.custom-contact-location__section-heading1
     .custom-contact-location__row
@@ -33,3 +37,13 @@
             AppIcon.custom-contact-location__icon1(name='phone')
           a.custom-contact-location__linking1(:href='content.telinfo' target='_blank')
             .custom-contact-location__locationname(v-if='content.cphone' v-html:span='content.cphone')
+        .custom-contact-location__listing
+          .custom-contact-location__icon
+            a.custom-contact-location__linking1(href='https://reynolds-orthodontics.com/wp-content/uploads/Reynolds-Ortho-Privacy-Policy.pdf' target='_blank')  Privacy Policy
+        .custom-contact-location__social-links
+          a.custom-contact-location__link1(href='https://www.instagram.com/reynolds_ortho/', target='_blank')
+            AppIcon.footer__link-icon(name='instagram')
+          a.custom-contact-location__link1(href='https://www.facebook.com/ReynoldsOrtho/', target='_blank')
+            AppIcon.footer__link-icon(name='facebook')
+          a.custom-contact-location__link1(href='https://g.page/reynolds-ortho?share', target='_blank')
+            AppIcon.footer__link-icon(name='google')
