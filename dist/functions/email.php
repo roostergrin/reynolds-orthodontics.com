@@ -15,13 +15,16 @@ function rg_serve_route () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'info@reynolds-ortho.com';
+  $to = 'form7test@gmail.com';
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
-  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['name'] . '</p>';
-  $message .= '<p><h4><strong>Email: </strong></h4>' . $data['email'] . '</p>';
-  $message .= '<p><h4><strong>Phone: </strong></h4>' . $data['phone'] . '</p>';
+  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['firstName'] . '</p>';
+  $message .= '<p><h4><strong>Patient Date of Birth: </strong></h4>' . $data['patientdob'] . '</p>';
+  $message .= '<p><h4><strong>Parent Name: </strong></h4>' . $data['parentName'] . '</p>';
+  $message .= '<p><h4><strong>Email:</strong></h4> ' . $data['email'] . '</p>';
+  $message .= '<p><h4><strong>Phone Number:</strong></h4> ' . $data['phoneNumber'] . '</p>';
+  $message .= '<p><h4><strong>Method of contact:</strong></h4> ' . $data['overallExperience'] . '</p>';
   $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
   $message .= '</body></html>';
 
