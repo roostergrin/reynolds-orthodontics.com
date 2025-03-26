@@ -26,6 +26,7 @@ function rg_serve_route () {
   $message .= '<p><h4><strong>Phone Number:</strong></h4> ' . $data['phoneNumber'] . '</p>';
   $message .= '<p><h4><strong>Method of contact:</strong></h4> ' . $data['overallExperience'] . '</p>';
   $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
+  $message .= '<p><h4><strong>Method of contact:</strong></h4> ' . $data['overallExperience'] . '</p>';
   $message .= '</body></html>';
 
   $table_name = $wpdb->prefix . 'emails';
