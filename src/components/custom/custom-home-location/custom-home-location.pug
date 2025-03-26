@@ -28,15 +28,15 @@
             iframe.custom-financials-location__iframemap1(:src='content.miframe' width='100%' height='300' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
           .custom-financials-location__text-info.custom-financials-location__text-center
             h4.custom-financials-location__subheading(v-html='content.mheading')
-          //-   .custom-financials-location__list
-          //-     .custom-financials-location__listing
-          //-       a.custom-financials-location__linking(:href='content.mglink' target='_blank')
-          //-         .custom-financials-location__icon
-          //-           AppIcon.custom-financials-location__icon1(name='marker-map')
-          //-         .custom-financials-location__locationname(v-html='content.madd')
-          //-     .custom-financials-location__listing
-          //-       a.custom-financials-location__linking(:href='content.mtel' target='_blank')
-          //-         .custom-financials-location__icon
-          //-           AppIcon.custom-financials-location__icon1(name='phone')
-          //-         .custom-financials-location__locationname(v-if='content.mphone' v-html:span='content.mphone')
-          //-       .custom-financials-location__text-danger(v-html='content.msoon')
+            .custom-financials-location__list
+              //- .custom-financials-location__listing
+              //-   a.custom-financials-location__linking(:href='content.mglink' target='_blank')
+              //-     .custom-financials-location__icon
+              //-       AppIcon.custom-financials-location__icon1(name='marker-map')
+              //-     .custom-financials-location__locationname(v-html='content.madd')
+              .custom-financials-location__listing
+                //- a.custom-financials-location__linking(:href='content.mtel' target='_blank')
+                //-   .custom-financials-location__icon
+                //-     AppIcon.custom-financials-location__icon1(name='phone')
+                //-   .custom-financials-location__locationname(v-if='content.mphone' v-html:span='content.mphone')
+                .custom-financials-location__text-danger(v-html='content.msoon')
