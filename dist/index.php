@@ -5,18 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
   <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB105NxpkVIDtjJeUTEt-9Ahtb0Qpb1Djo&amp"></script>
-  <script> 
-     (function(w, d, n){ 
-          if (w.MAI) return; 
-          w.MAI = w.MAI || {emit: function() {(w.MAI.q = w.MAI.q || []).push(arguments);}} 
-          var e = d.createElement(n); e.async=1; 
-          e.src = 'https://cdn.mgln.ai/pixel.min.js'; 
-          var s = d.getElementsByTagName(n)[0]; 
-          s.parentNode.insertBefore(e, s); 
-     })(window, document, 'script'); 
-     MAI.emit('conf', '019d88f028b872169ac40f24cbb293d7'); 
-     MAI.emit('view'); 
-</script>
   
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
