@@ -1,9 +1,10 @@
-.custom-about-doctor#doctor(v-waypoint='{ active: true, callback: onScroll, options: options }', :class="{ 'custom-about-doctor--active': active }")
+.custom-about-doctor#doctor(:class="{ 'custom-about-doctor--active': active }")
   .custom-about-doctor__container
     .custom-about-doctor__row
       .custom-about-doctor__title(v-html='content.title')
-    .custom-about-doctor__row
+    .custom-about-doctor__row.custom-about-doctor__row--image(v-waypoint='{ active: true, callback: onScroll, options: options }')
       img.custom-about-doctor__image(:src='content.image')
+    .custom-about-doctor__row.custom-about-doctor__row--content
       .custom-about-doctor__content(v-html='content.content')
     .custom-about-doctor__row
       .custom-about-doctor__tabs
