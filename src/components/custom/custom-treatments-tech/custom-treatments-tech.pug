@@ -1,0 +1,10 @@
+#treatment-tech.custom-treatments-tech(v-if='items.length')
+  .custom-treatments-tech__container
+    .custom-treatments-tech__title(v-html='content.title' v-if='content.title')
+    .custom-treatments-tech__intro(v-html='content.intro' v-if='content.intro')
+    .custom-treatments-tech__grid(:class="'custom-treatments-tech__grid--' + columns")
+      .custom-treatments-tech__tile(v-for='item, i in items', :key='i')
+        .custom-treatments-tech__icon(v-if='item.icon')
+          img.custom-treatments-tech__icon-img(:src='item.icon', :alt='item.title')
+        h3.custom-treatments-tech__tile-title(v-html='item.title')
+        .custom-treatments-tech__tile-body(v-html='item.body')

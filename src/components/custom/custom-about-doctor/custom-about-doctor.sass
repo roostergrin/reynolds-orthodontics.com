@@ -82,17 +82,19 @@
       justify-content: center
       padding: 0
     display: flex
-    position: absolute
-    top: 0
-    left: 0
     flex-wrap: wrap
     justify-content: space-between
     padding: 0 3rem
     width: 100%
-    height: 100%
+    // stacked in the same grid cell as its sibling tab so the crossfade still
+    // overlaps, without taking the boxes out of flow
+    grid-area: 1 / 1
 
   &__transition
-    height: 255px
+    // min-height, not height: on narrow screens the wrapped degree text is
+    // taller than 255px and a fixed height let it spill past this section
+    display: grid
+    min-height: 290px
 
   &__item
     @include phone-lg
@@ -103,8 +105,19 @@
     // width: 20%
 
     &--text
-      margin-bottom: rem-calc(10)
+      margin-bottom: rem-calc(20)
       width: 100%
+
+  &__note
+    // secondary line under a degree, e.g. "Class President"
+    @include phone-lg
+      font-size: 13px
+    display: block
+    margin-top: rem-calc(4)
+    color: $c4
+    font-size: 14px
+    font-weight: 600
+    font-style: italic
 
   &__logo
     @include phone-lg

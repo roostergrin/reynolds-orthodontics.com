@@ -10,7 +10,13 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/wp-json': {
+        target: 'https://reynolds-orthodontics591.e.wpstage.net',
+        changeOrigin: true,
+        auth: process.env.WP_STAGE_AUTH
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

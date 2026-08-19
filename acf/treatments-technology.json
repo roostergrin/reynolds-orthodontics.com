@@ -1,0 +1,107 @@
+[
+  {
+    "key": "group_treatments_technology",
+    "title": "Treatments — Technology",
+    "fields": [
+      {
+        "key": "field_tech",
+        "label": "Technology",
+        "name": "tech",
+        "type": "group",
+        "instructions": "Icon/logo tiles shown below Treatment Options.",
+        "required": 0,
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_tech_title",
+            "label": "Section Title",
+            "name": "title",
+            "type": "text",
+            "default_value": "Technology",
+            "required": 1
+          },
+          {
+            "key": "field_tech_intro",
+            "label": "Intro",
+            "name": "intro",
+            "type": "textarea",
+            "instructions": "Optional single sentence under the title. Leave blank to hide.",
+            "rows": 3,
+            "new_lines": ""
+          },
+          {
+            "key": "field_tech_columns",
+            "label": "Desktop Columns",
+            "name": "columns",
+            "type": "select",
+            "instructions": "Tiles per row on desktop. Collapses to 2 on tablet and 1 on phones automatically.",
+            "choices": {
+              "3": "3 across",
+              "4": "4 across"
+            },
+            "default_value": "3",
+            "return_format": "value",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0
+          },
+          {
+            "key": "field_tech_items",
+            "label": "Tiles",
+            "name": "items",
+            "type": "repeater",
+            "instructions": "One row per technology. Drag to reorder.",
+            "layout": "block",
+            "button_label": "Add Technology",
+            "min": 0,
+            "sub_fields": [
+              {
+                "key": "field_tech_item_icon",
+                "label": "Icon / Logo URL",
+                "name": "icon",
+                "type": "url",
+                "instructions": "Full CloudFront URL, matching the other images on the site (https://d1z5qdmjj6ns9z.cloudfront.net/...). Displays at 64px tall (56px on phones). Leave blank to render the tile with no icon.",
+                "required": 0,
+                "default_value": "",
+                "placeholder": "https://d1z5qdmjj6ns9z.cloudfront.net/treatments/..."
+              },
+              {
+                "key": "field_tech_item_title",
+                "label": "Title",
+                "name": "title",
+                "type": "text",
+                "required": 1
+              },
+              {
+                "key": "field_tech_item_body",
+                "label": "Body",
+                "name": "body",
+                "type": "textarea",
+                "instructions": "One to three sentences. Inline HTML is allowed; use <br> for a line break.",
+                "rows": 4,
+                "new_lines": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page",
+          "operator": "==",
+          "value": "44"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 1,
+    "description": "Technology tile grid for the Treatments (What We Do) page."
+  }
+]
