@@ -4,7 +4,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB105NxpkVIDtjJeUTEt-9Ahtb0Qpb1Djo&amp"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg1dfYCtkoY6DjK-OjKtrtc8w_3wBO4KA"></script>
   
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
